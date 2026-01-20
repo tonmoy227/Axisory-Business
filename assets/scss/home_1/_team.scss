@@ -98,6 +98,7 @@
 }
 
 .ax-team1-item {
+	z-index: 1;
 	overflow: hidden;
 	border-radius: 16px;
 	.item-link {
@@ -143,6 +144,16 @@
 		backdrop-filter: blur(5px);
 		transition: all 500ms ease-in-out;
 	}
+	&:after {
+		left: 0;
+		bottom: 0;
+		height: 50%;
+		z-index: 0;
+		width: 100%;
+		content: '';
+		position: absolute;
+		background: linear-gradient(180deg, rgba(13, 27, 42, 0) 0%, #0D1B2A 100%);
+	}
 	.item-img {
 		width: 272px;
 		height: 356px;
@@ -158,6 +169,7 @@
 		justify-content: space-between;
 	}
 	.item-name {
+		z-index: 2;
 		h3 {
 			color: #fff;
 			font-size: 18px;
@@ -169,6 +181,7 @@
 		}
 	}
 	.item-social {
+		z-index: 2;
 		a {
 			opacity: 0;
 			width: 32px;

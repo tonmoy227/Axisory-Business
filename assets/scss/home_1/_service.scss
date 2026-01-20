@@ -282,6 +282,7 @@
  			top: 0;
  			left: 0;
  			width: 100%;
+ 			z-index: -1;
  			height: 100%;
  			content: '';
  			position: absolute;
@@ -307,5 +308,6 @@
 
  .ax-spon-desc {
  	color: #fff;
- 	max-width: 440px;
+ 	opacity: .8;
+ 	max-width: 420px;
  }

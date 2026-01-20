@@ -3298,6 +3298,7 @@ a:hover, a:focus {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: -1;
   height: 100%;
   content: "";
   position: absolute;
@@ -3320,7 +3321,8 @@ a:hover, a:focus {
 
 .ax-spon-desc {
   color: #fff;
-  max-width: 440px;
+  opacity: 0.8;
+  max-width: 420px;
 }
 
 /*---------------------------------------------------- */
@@ -3600,6 +3602,10 @@ a:hover, a:focus {
   background: var(--ax-gradient2);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
+.ax-price1-item .item-btn a:hover {
+  -webkit-box-shadow: 0px 1px 4px 2px rgba(10, 10, 12, 0.2) inset, 0px 1px 28px 2px rgba(10, 10, 12, 0.0588235294) inset;
+          box-shadow: 0px 1px 4px 2px rgba(10, 10, 12, 0.2) inset, 0px 1px 28px 2px rgba(10, 10, 12, 0.0588235294) inset;
 }
 .ax-price1-item .item-btn a:hover:before {
   width: 100%;
@@ -4720,6 +4726,7 @@ a:hover, a:focus {
 }
 
 .ax-team1-item {
+  z-index: 1;
   overflow: hidden;
   border-radius: 16px;
 }
@@ -4777,6 +4784,17 @@ a:hover, a:focus {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.ax-team1-item:after {
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  z-index: 0;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 27, 42, 0)), to(#0D1B2A));
+  background: linear-gradient(180deg, rgba(13, 27, 42, 0) 0%, #0D1B2A 100%);
+}
 .ax-team1-item .item-img {
   width: 272px;
   height: 356px;
@@ -4797,6 +4815,9 @@ a:hover, a:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.ax-team1-item .item-name {
+  z-index: 2;
+}
 .ax-team1-item .item-name h3 {
   color: #fff;
   font-size: 18px;
@@ -4805,6 +4826,9 @@ a:hover, a:focus {
 .ax-team1-item .item-name span {
   color: #fff;
   opacity: 0.72;
+}
+.ax-team1-item .item-social {
+  z-index: 2;
 }
 .ax-team1-item .item-social a {
   opacity: 0;
@@ -5283,6 +5307,16 @@ a:hover, a:focus {
   opacity: 0.6;
   mix-blend-mode: luminosity;
 }
+.ax-faq1-sec .ax-faq-circle {
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
 
 .ax-faq1-content {
   margin: 0 auto;
@@ -5442,7 +5476,7 @@ a:hover, a:focus {
   height: 100%;
 }
 .ax-contact-sec .ax-cont-text {
-  top: 0;
+  top: 25px;
   left: 0;
   position: absolute;
 }
@@ -5788,6 +5822,17 @@ a:hover, a:focus {
           align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+.ax-ftr1-social .item-social a:after {
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
 .ax-ftr1-social .item-social a:before {
   top: 15px;
   right: 0;
@@ -5808,8 +5853,8 @@ a:hover, a:focus {
 .ax-ftr1-social .item-social a span {
   opacity: 0.8;
 }
-.ax-ftr1-social .item-social a:hover {
-  border-bottom: 1px solid rgb(255, 255, 255);
+.ax-ftr1-social .item-social a:hover:after {
+  width: 100%;
 }
 .ax-ftr1-social .item-social a:hover:before {
   color: var(--ax-prime-c);

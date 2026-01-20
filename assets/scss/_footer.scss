@@ -199,6 +199,16 @@
 			padding: 15px 0px;
 			align-items: center;
 			border-bottom: 1px solid rgba(255, 255, 255, .20);
+			&:after {
+				left: 0;
+				bottom: 0;
+				width: 0%;
+				height: 1px;
+				content: '';
+				position: absolute;
+				background-color: #fff;
+				transition: all 500ms ease-in-out;
+			}
 			&:before {
 				top: 15px;
 				right: 0;
@@ -219,7 +229,9 @@
 				opacity: .8;
 			}
 			&:hover {
-				border-bottom: 1px solid rgba(255, 255, 255, 1);
+				&:after {
+					width: 100%;
+				}
 				&:before {
 					color: var(--ax-prime-c);
 				}
