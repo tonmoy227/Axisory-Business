@@ -100,6 +100,30 @@
 .ax-team1-item {
 	overflow: hidden;
 	border-radius: 16px;
+	.item-link {
+		top: 50px;
+		opacity: 0;
+		right: 12px;
+		visibility: hidden;
+		transition: all 300ms ease-in-out;
+		a {
+			width: 48px;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			border-radius: 10px;
+			justify-content: center;
+			background: #FFFFFF47;
+			i {
+				color: #fff;
+				font-size: 20px;
+				transform: rotate(-45deg);
+			}
+			&:hover {
+				background-color: var(--ax-prime-c);
+			}
+		}
+	}
 	@media #{$xxs} {
 		margin: 0 auto;
 		max-width: 272px;
@@ -111,8 +135,10 @@
 		opacity: 0;
 		content: '';
 		height: 100%;
+		overflow: hidden;
 		position: absolute;
 		visibility: hidden;
+		border-radius: 16px;
 		background: #0D1B2A3D;
 		backdrop-filter: blur(5px);
 		transition: all 500ms ease-in-out;
@@ -167,6 +193,11 @@
 		}
 	}
 	&:hover {
+		.item-link {
+			top: 12px;
+			opacity: 1;
+			visibility: visible;
+		}
 		&:before {
 			opacity: 1;
 			visibility: visible;

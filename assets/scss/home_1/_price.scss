@@ -1,3 +1,11 @@
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
 .ax-price1-sec {
 	z-index: 1;
 	background-color: #F1F3F5;
@@ -15,6 +23,12 @@
 	.ax-price-shape2 {
 		top: -15%;
 		right: -8%;
+		img {
+			animation-name: spin;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear; 
+		}
 	}
 	.ax-price-shape1 {
 		top: 2%;
@@ -76,8 +90,8 @@
 	}
 	.ax-pr-shape2 {
 		left: -30%;
-		bottom: -52%;
 		width: 150%;
+		bottom: -45%;
 	}
 	.inner-item {
 		padding: 32px 36px;
@@ -209,7 +223,9 @@
 			position: relative;
 			text-align: center;
 			border-radius: 10px;
+			border: 1px solid #FFFFFF;
 			background-color: var(--ax-title-color);
+			box-shadow: 0px 1px 4px 2px #363687 inset , 0px 1px 18px 2px #363687 inset;
 			&:before {
 				top: 0;
 				left: 0;
@@ -255,6 +271,7 @@
 		padding: 13px;
 	}
 	p {
+		font-size: 20px;
 		max-width: 745px;
 		color: var(--ax-title-color);
 	}

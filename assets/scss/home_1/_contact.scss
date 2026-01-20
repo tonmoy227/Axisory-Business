@@ -1,5 +1,12 @@
+
 .ax-contact-sec {
+	position: sticky;
+	bottom: 0;
+	min-height: 100vh;
 	z-index: 1;
+	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+		position: static;
+	}
 	.ax-contact-bg {
 		top: 0;
 		left: 0;
@@ -57,10 +64,14 @@
 		letter-spacing: 1px;
 		color: rgba(255, 255, 255, .6);
 		background-color: transparent;
+		transition: all 400ms ease-in-out;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 		&::placeholder {
 			letter-spacing: 1px;
 			color: rgba(255, 255, 255, .6);
+		}
+		&:focus {
+			border-bottom: 1px solid rgba(255, 255, 255, 1);
 		}
 	}
 	textarea {

@@ -532,6 +532,38 @@ Last change:    00/00/00
 		.from(el, {  scale: 1, x: "-300"})
 	});
 
+	gsap.utils.toArray(' .right_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 100%",
+				end: "top 30%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, x: "300"})
+	});
+	gsap.utils.toArray(' .right_view2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 100%",
+				end: "top 30%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, x: "-100"})
+	});
 	gsap.utils.toArray(' .top_view4').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -568,21 +600,6 @@ Last change:    00/00/00
 		}); 
 	});
 
-	if (window.matchMedia("(min-width: 1200px)").matches) { 
-		var SponPin = document.querySelectorAll(".ax-faq1-sec")
-		SponPin.forEach((item) => {
-			gsap.to(item, {
-				scrollTrigger: {
-					trigger: item,
-					markers: false,
-					pin: true,
-					pinSpacing: false,
-					start: "top -12%",
-					end: "bottom 0%",
-				},
-			});
-		});
 
-	}
 
 })(jQuery);

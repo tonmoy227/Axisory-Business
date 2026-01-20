@@ -1,5 +1,18 @@
 .ax-ftr1-sec {
+	z-index: 1;
 	background-color: #00142A;
+	.ax-ftr-shape {
+		left: -20%;
+		z-index: -1;
+		bottom: -20%;
+		opacity: .08;
+	}
+	.ax-ftr-shape2 {
+		right: -20%;
+		z-index: -1;
+		bottom: -20%;
+		opacity: .15;
+	}
 }
 
 .ax-ftr1-content {
@@ -206,6 +219,10 @@
 				opacity: .8;
 			}
 			&:hover {
+				border-bottom: 1px solid rgba(255, 255, 255, 1);
+				&:before {
+					color: var(--ax-prime-c);
+				}
 				span {
 					opacity: 1;
 					letter-spacing: 1px;

@@ -237,7 +237,7 @@
 	============================================= -->
 	<section id="ax-ft1" class="ax-ft1-sec">
 		<div class="container">
-			<div class="ax-ft1-content">
+			<div class="ax-ft1-content over-hidden">
 				<div class="ax-ft1-item">
 					<div class="item-img img-cover">
 						<img src="assets/img/feature/ft1.jpg" alt="">
@@ -347,7 +347,7 @@
 		<div class="container">
 			<div class="ax-ab1-content over-hidden d-flex justify-content-between">
 				<div class="ax-ab1-img">
-					<div class="item-img img-cover">
+					<div class="item-img img-parallax img-cover">
 						<img src="assets/img/about/ab1.jpg" alt="">
 					</div>
 				</div>
@@ -1414,7 +1414,7 @@
 						<!-- Item End -->
 						<div class="ax-wc1-item4 over-hidden position-relative">
 							<div class="inner-item">
-								<span class="ax-wc1-img2 position-absolute"><img src="assets/img/about/wc2.png" alt=""></span>
+								<span class="ax-wc1-img2 right_view position-absolute"><img src="assets/img/about/wc2.png" alt=""></span>
 								<span class="ax-wc-shape1 position-absolute"><img src="assets/img/shape/shape10.svg" alt=""></span>
 								<span class="ax-wc-shape2 position-absolute"><img src="assets/img/shape/shape9.png" alt=""></span>
 								<div class="item-title mb-50 headline pera-content">
@@ -1444,7 +1444,8 @@
 						<!-- Item End -->
 					</div>
 				</div>
-				<div class="ax-wc1-item5" data-background="assets/img/bg/wc-item-bg.jpg">
+				<div class="ax-wc1-item5 position-relative">
+					<div class="item-bg position-absolute right_view2 img-cover"><img src="assets/img/bg/wc-item-bg.jpg"></div>
 					<div class="item-text pera-content ul-li-block">
 						<div class="item-title headline d-flex align-items-center">
 							<i><img src="assets/img/icon/ic32.svg" alt=""></i>
@@ -1689,6 +1690,9 @@
 				</div>
 				<div class="ax-team-member-wrap">
 					<div class="ax-team1-item position-relative">
+						<div class="item-link position-absolute">
+							<a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+						</div>
 						<div class="item-img img-cover">
 							<img src="assets/img/team/tm1.jpg" alt="">
 						</div>
@@ -1706,6 +1710,9 @@
 						</div>
 					</div>
 					<div class="ax-team1-item position-relative">
+						<div class="item-link position-absolute">
+							<a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+						</div>
 						<div class="item-img img-cover">
 							<img src="assets/img/team/tm2.jpg" alt="">
 						</div>
@@ -1723,6 +1730,9 @@
 						</div>
 					</div>
 					<div class="ax-team1-item position-relative">
+						<div class="item-link position-absolute">
+							<a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+						</div>
 						<div class="item-img img-cover">
 							<img src="assets/img/team/tm3.jpg" alt="">
 						</div>
@@ -1740,6 +1750,9 @@
 						</div>
 					</div>
 					<div class="ax-team1-item position-relative">
+						<div class="item-link position-absolute">
+							<a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+						</div>
 						<div class="item-img img-cover">
 							<img src="assets/img/team/tm4.jpg" alt="">
 						</div>
@@ -1920,10 +1933,11 @@
 <!-- End of Blog section
 	============================================= -->
 
+	<div class="ax-pinned-sec">
 <!-- Start of Faq section
 	============================================= -->
-	<section id="ax-faq1" class="ax-faq1-sec over-hidden">
-		<div class="ax-faq1-wrapper position-relative pt-135 pb-50">
+	<section id="ax-faq1" class="ax-faq1-sec">
+		<div class="ax-faq1-wrapper position-relative  over-hidden pt-135  pb-135">
 			<div class="ax-faq1-bg position-absolute"><img src="assets/img/bg/faq-bg.png" alt=""></div>
 			<div class="container">
 				<div class="ax-sec-title text-center headline pera-content">
@@ -2016,49 +2030,55 @@
 
 <!-- Start of Contact section
 	============================================= -->
-	<section id="ax-contact" class="ax-contact-sec over-hidden position-relative">
-		<div class="ax-cont-text marquee-left text-uppercase headline">
-			<h2>Get in Touch With Our Consulting Experts</h2>
-		</div>
-		<div class="ax-contact-bg img-cover position-absolute"><img src="assets/img/bg/cn-bg.jpg" alt=""></div>
-		<div class="container">
-			<div class="ax-contact-content d-flex justify-content-end">
-				<div class="ax-contact-form">
-					<form action="#" method="post">
-						<div class="row">
-							<div class="col-md-6">
-								<label>Full Name</label>
-								<input type="text" placeholder="Enter your name">
+	<section id="ax-contact" class="ax-contact-sec">
+		<div class="ax-contact-wrapper  over-hidden position-relative">
+			<div class="ax-cont-text marquee-left text-uppercase headline">
+				<h2>Get in Touch With Our Consulting Experts</h2>
+			</div>
+			<div class="ax-contact-bg img-cover position-absolute"><img src="assets/img/bg/cn-bg.jpg" alt=""></div>
+			<div class="container">
+				<div class="ax-contact-content d-flex justify-content-end">
+					<div class="ax-contact-form">
+						<form action="#" method="post">
+							<div class="row">
+								<div class="col-md-6">
+									<label>Full Name</label>
+									<input type="text" placeholder="Enter your name">
+								</div>
+								<div class="col-md-6">
+									<label>Phone Number</label>
+									<input type="text" placeholder="Enter your number">
+								</div>
+								<div class="col-md-12">
+									<label>Email Address</label>
+									<input type="mail" placeholder="Enter your email">
+								</div>
+								<div class="col-md-12">
+									<label>Message</label>
+									<textarea name="#" id="#" placeholder="Enter your Message here ..">
+
+									</textarea>
+								</div>
+								<div class="col-md-12">
+									<button><span>Submit Now</span> <i class="fa-solid fa-arrow-right"></i></button>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<label>Phone Number</label>
-								<input type="text" placeholder="Enter your number">
-							</div>
-							<div class="col-md-12">
-								<label>Email Address</label>
-								<input type="mail" placeholder="Enter your email">
-							</div>
-							<div class="col-md-12">
-								<label>Message</label>
-								<textarea name="#" id="#" placeholder="Enter your Message here ..">
-									
-								</textarea>
-							</div>
-							<div class="col-md-12">
-								<button><span>Submit Now</span> <i class="fa-solid fa-arrow-right"></i></button>
-							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 <!-- End of Contact section
 	============================================= -->	
+</div>
+
 
 <!-- Start of Footer section
 	============================================= -->
-	<footer id="ax-ftr1" class="ax-ftr1-sec over-hidden pt-135">
+	<footer id="ax-ftr1" class="ax-ftr1-sec over-hidden position-relative pt-135">
+		<span class="ax-ftr-shape position-absolute"><img src="assets/img/shape/shape12.svg" alt=""></span>
+		<span class="ax-ftr-shape2 position-absolute"><img src="assets/img/shape/shape12.svg" alt=""></span>
 		<div class="container">
 			<div class="ax-ftr1-content d-flex justify-content-between">
 				<div class="ax-ftr1-widget">
@@ -2149,25 +2169,25 @@
 
 
 
-	<!-- For Js Library -->
-	<script src="assets/js/jquery-3.7.0.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/swiper-bundle.min.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/appear.js"></script>
-	<script src="assets/js/odometer.min.js"></script>
-	<script src="assets/js/gsap.min.js"></script>
-	<script src="assets/js/jquery.counterup.min.js"></script>
-	<script src="assets/js/waypoints.min.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/jquery.marquee.min.js"></script>
-	<script src="assets/js/lenis.min.js"></script>
-	<script src="assets/js/CustomEase.min.js"></script>
-	<script src="assets/js/pixi.min.js"></script>
-	<script src="assets/js/parallax.min.js"></script>
-	<script src="assets/js/split-type.min.js"></script>
-	<script src="assets/js/ScrollTrigger.min.js"></script>
-	<script src="assets/js/SplitText.min.js"></script>
-	<script src="assets/js/script.js"></script>
+<!-- For Js Library -->
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.marquee.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/CustomEase.min.js"></script>
+<script src="assets/js/pixi.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/split-type.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>     

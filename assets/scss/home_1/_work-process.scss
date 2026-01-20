@@ -90,13 +90,31 @@
 		.title-serial {
 			gap: 15px;
 			margin-bottom: 15px;
+			position: relative;
 			padding-bottom: 15px;
-			border-bottom: 1px solid #fff;
+			border-bottom: 1px solid rgba(255, 255, 255, .52);
+			&:before {
+				left: 0;
+				right: 0;
+				width: 0%;
+				height: 1px;
+				bottom: -1px;
+				content: '';
+				margin: 0 auto;
+				position: absolute;
+				transition: all 400ms ease-in-out;
+				background-color: var(--ax-color2);
+			}
 		}
 	}
 	&:hover {
 		.item-icon {
 			animation: hithere 1s ease infinite;
+		}
+		.title-serial {
+			&:before {
+				width: 100%;
+			}
 		}
 	}
 }
