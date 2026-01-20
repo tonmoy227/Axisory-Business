@@ -3228,6 +3228,9 @@ a:hover, a:focus {
     text-align: center;
   }
 }
+.ax-sponsor-content .ax-sec-title .sec_title {
+  font-size: 36px;
+}
 
 .ax-sponsor-top {
   gap: 60px;
