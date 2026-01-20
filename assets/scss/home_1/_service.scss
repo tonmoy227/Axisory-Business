@@ -225,6 +225,7 @@
  .ax-sponsor-content {
  	.ax-sec-title {
  		margin: 0;
+ 		max-width: 700px;
  		@media #{$lg,$md,$sm,$xs,$xxs} {
  			margin: 0 auto;
  			text-align: center;
