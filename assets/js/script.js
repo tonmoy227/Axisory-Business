@@ -147,6 +147,26 @@ Last change:    00/00/00
 				.from(".ax-hero1-text .hero_text_left p", { yPercent: 30, opacity: 0, duration: 1, transformOrigin: "top",  ease: "power1.out" },"< = .5")
 				.from(".ax-hero1-text .hero_text_right .item-desc-btn", { yPercent: 30, opacity: 0, duration: 1, transformOrigin: "top",  ease: "power1.out" },"<")
 
+
+				if ($('.ax-hero2-slider').length > 0 ) {
+					var slider = new Swiper('.ax-hero2-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						loop: true,
+						// autoplay: {
+						// 	enabled: true,
+						// 	delay: 1000
+						// },
+						speed: 1000,
+						pagination: {
+							el: ".ax-hr2-pagi",
+							clickable: true,
+						}
+					});
+				};
+
+
+
 				afterPageLoad();
 			}, 700);
 
@@ -252,11 +272,13 @@ Last change:    00/00/00
 
 	const priceGroup = document.querySelector('.ax-price1-grp');
 
-	priceGroup.querySelectorAll('.toggler, .toggle').forEach(el => {
-		el.addEventListener('click', () => {
-			priceGroup.classList.toggle('active');
+	if (priceGroup) {
+		priceGroup.querySelectorAll('.toggler, .toggle').forEach(el => {
+			el.addEventListener('click', () => {
+				priceGroup.classList.toggle('active');
+			});
 		});
-	});
+	}
 
 
 	// Project Slider //

@@ -338,5 +338,129 @@
 			}
 		}
 	}
+	&:is(.header_style_two) {
+		border-bottom: 1px solid #0000001A;
+		.header-content {
+			padding-left: 20px;
+			.header-cta {
+				width: 100%;
+				max-width: 1146px;
+				@media #{$xl,$lg} {
+					max-width: 918px;
+				}
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					width: auto;
+				}
+				.cta-info-wrap {
+					display: flex;
+					margin-right: 45px;
+					@media #{$lg} {
+						margin-right: 15px;
+						margin-left: 15px;
+					}
+					@media #{$md,$sm,$xs,$xxs} {
+						display: none !important;
+					}
+					a {
+						margin-right: 32px;
+						white-space: nowrap;
+						color: var(--ax-prime-c2);
+						@media #{$lg,$md,$sm,$xs,$xxs} {
+							margin-right: 10px;
+						}
+						span {
+							color: #041427;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+			.menu-trigger {
+				button {
+					padding: 0;
+					width: 98px;
+					border: none;
+					height: 72px;
+					padding-top: 5px;
+					background-color: #041427;
+				}
+				.button-line {
+					width: 28px;
+					margin: 0 auto;
+					margin-bottom: 8px;
+					span {
+						width: 16px;
+						height: 1px;
+						display: block;
+						margin-bottom: 6px;
+						background-color: #fff;
+						&:nth-child(2) {
+							width: 28px;
+						}
+						&:nth-child(1) {
+							margin-left: 12px;
+							text-align: right;
+						}
+					}
+				}
+				p {
+					color: #E5E5E5;
+					font-size: 14px;
+				}
+			}
+			.cta-btn {
+				width: 100%;
+				height: 72px;
+				max-width: 468px;
+				padding-right: 24px;
+				background-color: var(--ax-prime-c2);
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					max-width: 260px;
+					padding-left: 15px;
+				}
+				@media #{$xs,$xxs} {
+					display: none !important;
+				}
+				a {
+					gap: 12px;
+					display: flex;
+					align-items: center;
+					span {
+						color: #fff;
+						font-size: 14px;
+						white-space: nowrap;
+						padding: 9px 16px 8px;
+						background-color: #FFFFFF1A;
+					}
+					i {
+						width: 38px;
+						height: 38px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background-color: #FFFFFF1A;
+						svg {
+							opacity: .8;
+							transition: all 500ms ease-in-out;
+							transform: translateX(-54px) translateY(90px) scale(3.5);
+							@media #{$lg,$md,$sm,$xs,$xxs} {
+								opacity: 1;
+								transform: translateX(0px) translateY(0px) scale(1);
+							}
+						}
+					}
+
+					&:hover {
+						i {
+							svg {
+								opacity: 1;
+								transform: translateX(0px) translateY(0px) scale(1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
