@@ -11,6 +11,9 @@
 	@media #{$md,$sm,$xs,$xxs} {
 		padding-left: 0;
 	}
+	@media #{$xxs} { 
+		padding-right: 50px;
+	}
 	&:before {
 		left: 36px;
 		width: 1px;
@@ -143,10 +146,12 @@
 	z-index: 1;
 	padding-top: 240px;
 	padding-bottom: 240px;
-	@media #{$md,$sm,$xs,$xxs} {
+	@media #{$md,$sm,$xs} {
 		padding: 180px 0px 120px;
 	}
-
+	@media #{$xxs} { 
+		padding: 140px 0px 100px;
+	}
 	.ax-hero2-bg {
 		top: 0;
 		left: 0;
@@ -208,7 +213,18 @@
 		span {
 			color: rgba(255, 255, 255, .7);
 		}
-
+		@media #{$sm} { 
+			font-size: 60px;
+		}
+		@media #{$xs} { 
+			font-size: 50px;
+		}
+		@media #{$xxs} { 
+			font-size: 45px;
+		}
+		@media #{$xxxs} { 
+			font-size: 38px;
+		}
 	}
 	.item-desc {
 		gap: 20px;
@@ -233,6 +249,9 @@
 	width: auto !important;
 	position: absolute;
 	top: 48% !important;
+	@media #{$xxs} { 
+		right: 12px;
+	}
 	.swiper-pagination-bullet {
 		opacity: 1;
 		width: 24px;
@@ -254,7 +273,7 @@
 			transition: all 500ms ease-in-out;
 		}
 		&:after {
-			top: 35%;
+			top: 34%;
 			left: 50%;
 			width: 8px;
 			height: 8px;

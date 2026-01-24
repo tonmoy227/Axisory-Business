@@ -58,6 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 .home-2 {
 	font-size: 16px;
+	color: var(--ax-body-color2);
 	&::-webkit-scrollbar-thumb {
 		outline: none;
 		border-radius: 0px;
@@ -65,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 		background-color: var(--ax-prime-c2);
 	}
 	.container {
-		max-width: 1396px;
+		max-width: 1384px;
 	}
 }
 .ul-li ul {
@@ -292,48 +293,7 @@ a {
 	}
 }
 
-.ax-btn1 {
-	display: inline-block;
-	a {
-		gap: 16px;
-		display: flex;
-		align-items: center;
-		border-radius: 100px;
-		font-family: var(--ax-mona);
-		padding: 10px 10px 10px 30px;
-		background: linear-gradient(90deg, var(--ax-color2) 0%,var(--ax-color1) 50%, var(--ax-color2) 100%);
-		background-size: 200% 100%;
-		background-position: left center;
-		transition: background-position 0.5s ease;
-		span {
-			color: #fff;
-			font-weight: 600;
-			white-space: nowrap;
-			letter-spacing: .32px;
-		}
-		i {
-			width: 36px;
-			color: #fff;
-			height: 36px;
-			display: flex;
-			border-radius: 100%;
-			align-items: center;
-			justify-content: center;
-			transform: rotate(-45deg);
-			background: linear-gradient(90deg, var(--ax-color1) 0%,var(--ax-color2) 50%, var(--ax-color1) 100%);
-			background-size: 200% 100%;
-			background-position: left center;
-			transition:  0.5s ease;
-		}
-		&:hover {
-			background-position: right center;
-			i {
-				background-position: right center;
-				transform: rotate(0deg);
-			}
-		}
-	}
-}
+
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
 	line-height: 1;
@@ -398,7 +358,86 @@ a {
 	}
 }
 
+.ax-sec-title2 {
+	.subtitle {
+		margin-bottom: 10px;
+		letter-spacing: -.5px;
+		color: var(--ax-prime-c2);
+	}
+	.sec_title {
+		font-size: 44px;
+		font-weight: 600;
+		line-height: 1.2;
+		letter-spacing: -.5px;
+		span {
+			color: var(--ax-prime-c2);
+		}
+		@media #{$md} {
+			font-size: 42px;
+		}
+		@media #{$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 38px;
+		}
+		@media #{$xxs} {
+			font-size: 34px;
+		}
+		@media #{$xxxs} {
+			font-size: 30px;
+		}
+	}
+	p {
+		padding-top: 8px;
+	}
+}
+
+.ax-btn1 {
+	display: inline-block;
+	a {
+		gap: 16px;
+		display: flex;
+		align-items: center;
+		border-radius: 100px;
+		font-family: var(--ax-mona);
+		padding: 10px 10px 10px 30px;
+		background: linear-gradient(90deg, var(--ax-color2) 0%,var(--ax-color1) 50%, var(--ax-color2) 100%);
+		background-size: 200% 100%;
+		background-position: left center;
+		transition: background-position 0.5s ease;
+		span {
+			color: #fff;
+			font-weight: 600;
+			white-space: nowrap;
+			letter-spacing: .32px;
+		}
+		i {
+			width: 36px;
+			color: #fff;
+			height: 36px;
+			display: flex;
+			border-radius: 100%;
+			align-items: center;
+			justify-content: center;
+			transform: rotate(-45deg);
+			background: linear-gradient(90deg, var(--ax-color1) 0%,var(--ax-color2) 50%, var(--ax-color1) 100%);
+			background-size: 200% 100%;
+			background-position: left center;
+			transition:  0.5s ease;
+		}
+		&:hover {
+			background-position: right center;
+			i {
+				background-position: right center;
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+
 .ax-btn2 {
+	display: inline-block;
 	a {
 		span {
 			color: #fff;
@@ -424,7 +463,10 @@ a {
 		}
 	}
 	&:is(.ver_2) {
-		background-color: #051229;
+		i {
+			color: #fff;
+			background-color: #051229;
+		}
 	}
 }
 

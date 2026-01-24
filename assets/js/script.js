@@ -99,6 +99,26 @@ Last change:    00/00/00
 	});
 
 
+	$('.marquee-left2').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right2').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+
+
 	gsap.registerPlugin(ScrollTrigger);
 	PIXI.utils.skipHello();
 	// Animation
@@ -338,9 +358,6 @@ Last change:    00/00/00
 	function afterPageLoad() {
 		CustomEase.create("ease1", "0, 0, 0.2, 1");
 
-	/* 
-		hero-1-img-animation
-	*/
 
 		if (!/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
@@ -470,6 +487,7 @@ Last change:    00/00/00
 		duration: 1, 
 		stagger: -.2,
 	})
+
 	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -486,6 +504,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, {  scale: 1, y: "300"})
 	});
+
 	gsap.utils.toArray(' .top_view5').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -502,6 +521,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 0, scale: .5, yPercent: 100})
 	});
+
 	gsap.utils.toArray(' .top_view2').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -570,6 +590,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, {  scale: 1, x: "300"})
 	});
+
 	gsap.utils.toArray(' .right_view2').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -586,6 +607,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, {  scale: 1, x: "-100"})
 	});
+
 	gsap.utils.toArray(' .top_view4').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -622,6 +644,80 @@ Last change:    00/00/00
 		}); 
 	});
 
+	$('.ax_item_active').on('mouseover', function () {
+		var $group = $(this).closest('[data-nx-group]');
+		$group.find('.ax_item_active').removeClass('active');
+		$(this).addClass('active');
+	});
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		document.querySelectorAll(".ax-project2-wrapper").forEach((item) => {
+			ScrollTrigger.create({
+				trigger: item,
+				pin: true,
+				pinSpacing: true,
+				start: "top 8%",
+				end: "+=100%", 
+				markers: false 
+			});
+		});
+
+
+		gsap.utils.toArray('.ax-project2-content1').forEach((el, index) => { 
+			let Vertex = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".ax-project2-content1",
+					scrub: 6,
+					start: "top 10%",
+					end: "bottom 20%",
+					toggleActions: "play none none reverse", 
+					markers: false
+				}
+			})
+
+			Vertex
+			.set(el, {transformOrigin: 'top bottom'})
+			.fromTo(el, { x: 0  }, { x: -800 , duration: 30, immediateRender: false})
+		});
+
+
+		gsap.utils.toArray('.ax-project2-content2').forEach((el, index) => { 
+			let Vertex = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".ax-project2-content2",
+					scrub: 6,
+					start: "top 50%",
+					end: "bottom 20%",
+					toggleActions: "play none none reverse", 
+					markers: false
+				}
+			})
+
+			Vertex
+			.set(el, {transformOrigin: 'top bottom'})
+			.fromTo(el, { x: 0  }, { x: 500 , duration: 30, immediateRender: false})
+		});
+	}
+
+	const circle = document.querySelector(".progress-circle");
+	const radius = circle.r.baseVal.value;
+	const circumference = 2 * Math.PI * radius;
+	gsap.set(circle, {
+		strokeDasharray: circumference,
+		strokeDashoffset: circumference
+	});
+
+	gsap.to(circle, {
+		strokeDashoffset: 0,
+		scrollTrigger: {
+			trigger: ".ax-btn-cir",
+			start: "top 28%",
+			end: "top -20%",
+			scrub: true,
+			markers: false
+		}
+	});
 
 
 })(jQuery);
