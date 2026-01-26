@@ -301,6 +301,40 @@ Last change:    00/00/00
 	}
 
 
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".price-toggle").forEach((wrap) => {
+
+			const monthlyBtn = wrap.querySelector(".toggler--monthly");
+			const hourlyBtn  = wrap.querySelector(".toggler--hourly");
+			const switcher   = wrap.querySelector(".switcher");
+			const monthlyBox = wrap.querySelector(".monthly");
+			const hourlyBox  = wrap.querySelector(".hourly");
+
+			if (!monthlyBtn || !hourlyBtn || !switcher || !monthlyBox || !hourlyBox) {
+				console.warn("Toggle elements missing in one pricing block");
+				return;
+			}
+
+			const activate = (mode) => {
+				const isHourly = mode === "hourly";
+
+				switcher.checked = isHourly;
+
+				monthlyBtn.classList.toggle("toggler--is-active", !isHourly);
+				hourlyBtn.classList.toggle("toggler--is-active", isHourly);
+
+				monthlyBox.classList.toggle("hide", isHourly);
+				hourlyBox.classList.toggle("hide", !isHourly);
+			};
+
+			monthlyBtn.addEventListener("click", () => activate("monthly"));
+			hourlyBtn.addEventListener("click", () => activate("hourly"));
+			switcher.addEventListener("click", () =>
+				activate(switcher.checked ? "hourly" : "monthly")
+				);
+		});
+	});
+
 	// Project Slider //
 	if ($('.ax-cs-slider').length > 0 ) {
 		var slider = new Swiper('.ax-cs-slider', {
@@ -719,5 +753,47 @@ Last change:    00/00/00
 		}
 	});
 
+
+	if($(".ax-testi2-slider").length) {
+		var swiper3 = new Swiper(".ax-tst-thumb-slider", {
+			speed: 500,
+			loop: true,
+			slideToClickedSlide: true,
+			centeredSlides: true,
+			breakpoints: {
+				0: {
+					slidesPerView: 5,
+				},
+				576: {
+					slidesPerView: 5,
+				},
+				767: {
+					slidesPerView: 5,
+				},
+				768: {
+					slidesPerView: 5,
+				},
+				992: {
+					slidesPerView: 5,
+				},
+			},
+
+		});
+		var swiper2 = new Swiper(".ax-testi2-slider", {
+			speed: 500,
+			loop: true,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+			// autoplay: {
+			// 	delay: 6000,
+			// },
+			thumbs: {
+				swiper: swiper3,
+			},
+
+		});
+	}
 
 })(jQuery);
