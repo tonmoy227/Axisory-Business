@@ -74,6 +74,16 @@ Last change:    00/00/00
 			jQuery(this).parent().find("> .dropdown-menu").toggleClass("active"),
 			jQuery(this).parent().find("> .dropdown-menu").slideToggle());
 	});
+
+	if($('.ax-split-1').length) {
+		var txtSplit = $('.ax-split-1');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		});
+	}
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -172,6 +182,7 @@ Last change:    00/00/00
 					var slider = new Swiper('.ax-hero2-slider', {
 						spaceBetween: 0,
 						slidesPerView: 1,
+						effect: "fade",
 						loop: true,
 						// autoplay: {
 						// 	enabled: true,
@@ -181,7 +192,11 @@ Last change:    00/00/00
 						pagination: {
 							el: ".ax-hr2-pagi",
 							clickable: true,
-						}
+						},
+						navigation: {
+							nextEl: ".ax-hr2-next",
+							prevEl: ".ax-hr2-prev",
+						},
 					});
 				};
 
@@ -375,6 +390,7 @@ Last change:    00/00/00
 	};
 
 // Testimonial Slider //
+
 	if ($('.ax-testi1-slider').length > 0 ) {
 		var slider = new Swiper('.ax-testi1-slider', {
 			slidesPerView: 1,
@@ -385,6 +401,81 @@ Last change:    00/00/00
 			navigation: {
 				nextEl: ".ax-testi1-next",
 				prevEl: ".ax-testi1-prev",
+			},
+		});
+	};
+
+	
+	if ($('.ax-blg2-slider').length > 0 ) {
+		var slider = new Swiper('.ax-blg2-slider', {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 12,
+			speed: 1000,
+			navigation: {
+				nextEl: ".ax-blg2-next",
+				prevEl: ".ax-blg2-prev",
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 4,
+				},
+				'1200': {
+					slidesPerView: 3,
+				},
+				'1100': {
+					slidesPerView: 1,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	};
+
+
+	if ($('.ax-cs-slider').length > 0 ) {
+		var slider = new Swiper('.ax-cs-slider', {
+			spaceBetween: 28,
+			slidesPerView: 3,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 1000,
+			pagination: {
+				el: ".ax-cs-pagi",
+				clickable: true,
+			},
+			breakpoints: {
+				'1200': {
+					slidesPerView: 3,
+				},
+				'840': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
 			},
 		});
 	};
@@ -469,7 +560,7 @@ Last change:    00/00/00
 	}
 
 
-	const buttons = document.querySelectorAll(".ax-btn1 a");
+	const buttons = document.querySelectorAll(".ax-btn1 a, .ax-btn2 a span");
 	buttons.forEach(btn => {
 		const split = new SplitText(btn, { type: "chars" });
 		gsap.set(split.chars, { y: 0, opacity: 1 });
@@ -733,27 +824,27 @@ Last change:    00/00/00
 			.fromTo(el, { x: 0  }, { x: 500 , duration: 30, immediateRender: false})
 		});
 	}
+	if($(".ax-project2-wrapper").length) {
+		const circle = document.querySelector(".progress-circle");
+		const radius = circle.r.baseVal.value;
+		const circumference = 2 * Math.PI * radius;
+		gsap.set(circle, {
+			strokeDasharray: circumference,
+			strokeDashoffset: circumference
+		});
 
-	const circle = document.querySelector(".progress-circle");
-	const radius = circle.r.baseVal.value;
-	const circumference = 2 * Math.PI * radius;
-	gsap.set(circle, {
-		strokeDasharray: circumference,
-		strokeDashoffset: circumference
-	});
+		gsap.to(circle, {
+			strokeDashoffset: 0,
+			scrollTrigger: {
+				trigger: ".ax-btn-cir",
+				start: "top 28%",
+				end: "top -20%",
+				scrub: true,
+				markers: false
+			}
+		});
 
-	gsap.to(circle, {
-		strokeDashoffset: 0,
-		scrollTrigger: {
-			trigger: ".ax-btn-cir",
-			start: "top 28%",
-			end: "top -20%",
-			scrub: true,
-			markers: false
-		}
-	});
-
-
+	}
 	if($(".ax-testi2-slider").length) {
 		var swiper3 = new Swiper(".ax-tst-thumb-slider", {
 			speed: 500,
