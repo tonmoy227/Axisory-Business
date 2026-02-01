@@ -18,6 +18,7 @@
 }
 
 .ax-work-p2-item {
+	position: relative;
 	.inner-item {
 		z-index: 1;
 		width: 100%;
@@ -120,6 +121,7 @@
 			letter-spacing: -1px;
 			transition: all 400ms ease-in-out;
 		}
+
 		&:hover {
 			background: var(--ax-prime-c2);
 			&:before {
@@ -135,6 +137,21 @@
 					-webkit-line-clamp: 3;
 				}
 			}
+		}
+	}
+	.item-arrow {
+		top: 50%;
+		right: -32px;
+		width: 66px;
+		z-index: 2;
+		height: 66px;
+		position: absolute;
+		border-radius: 100%;
+		border: 6px solid #FFFFFF;
+		background-color: #F2F5FA;
+		transform: translateY(-50%);
+		@media #{$sm,$xs,$xxs} {
+			display: none;
 		}
 	}
 }

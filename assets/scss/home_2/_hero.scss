@@ -2,6 +2,16 @@
 	@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
 		height: auto;
 	}
+	&:before {
+		right: 0;
+		top: 72px;
+		z-index: 1;
+		width: 72px;
+		content: '';
+		height: 165px;
+		position: absolute;
+		background-color: var(--ax-prime-c2);
+	}
 }
 .ax-hero2-content {
 	margin-top: 72px;
@@ -38,7 +48,7 @@
 		top: 0;
 		right: 0;
 		z-index: 2;
-		width: 240px;
+		width: 170px;
 		height: 165px;
 		position: absolute;
 		background-color: var(--ax-prime-c2);
@@ -48,35 +58,10 @@
 		.item-icon {
 			height: 80px;
 			margin-top: 20px;
-			margin-right: 10px;
+			margin-right: 20px;
 			position: relative;
 			svg {
 				transition: all 500ms ease-in-out;
-			}
-			&:before {
-				left: -20px;
-				bottom: 1px;
-				width: 24px;
-				content: "";
-				height: 24px;
-				position: absolute;
-				border-radius: 100%;
-				border: 1px solid #fff;
-			}
-			&:after {
-				width: 8px;
-				bottom: 9px;
-				height: 8px;
-				left: -12px;
-				content: '';
-				border-radius: 100%;
-				position: absolute;
-				background-color: #fff;
-			}
-		}
-		&:hover {
-			svg {
-				transform:  scale(0);
 			}
 		}
 	}
@@ -155,13 +140,45 @@
 	@media #{$xxs} { 
 		padding: 140px 0px 100px;
 	}
+	.item-circle {
+		bottom: 65px;
+		left: 70px;
+		position: absolute;
+		&:before {
+			top: 10px;
+			right: 8px;
+			width: 8px;
+			height: 8px;
+			content: '';
+			border-radius: 100%;
+			position: absolute;
+			background-color: #fff;
+		}
+		.item-progress {
+			stroke: red;
+			fill: transparent;
+			circle:nth-child(1) {
+				stroke-dashoffset: 0px;
+				stroke-dasharray: 90px;
+				stroke: rgba(255, 255, 255, 0.1);
+			}
+			circle:nth-child(2) {
+				stroke-dasharray: 90px;
+				stroke-dashoffset: 90px;
+				stroke: rgba(255, 255, 255, 1);
+			}
+		}
+	}
 	.ax-hero2-bg {
 		top: 0;
 		left: 0;
 		z-index: -2;
+		transform: scale(1.1);
+		filter: blur(15px);
+		transition: all 1200ms ease-in-out;
 		img {
-			transition: all 800ms ease-in-out;
-			transform: scale(1.1) translateX(30px);
+			transition: all 15000ms ease-in-out;
+			transform: scale(1) translateX(0px);
 		}
 	}
 	.ax-hero2-shape {
@@ -255,7 +272,7 @@
 			height: 40px;
 		}
 		.item-text {
-			color: #fff;
+			color: #E5E5E5;
 			font-size: 18px;
 			max-width: 650px;
 		}
@@ -338,6 +355,9 @@
 			font-size: 15px;
 			align-items: center;
 		}
+		&:is(.ver_2) {
+			border-left: 4px solid #B4E717;
+		}
 	}
 }
 .ax-hr2-nav {
@@ -352,11 +372,6 @@
 		border-radius: 100%;
 		background-color:  #FFFFFF1A;
 		transition: all 500ms ease-in-out;
-		svg {
-			top: 0;
-			left: 0;
-			position: absolute;
-		}
 		&:hover {
 			background-color: var(--ax-prime-c2);
 		}
@@ -375,8 +390,20 @@
 
 .swiper-slide-active {
 	.ax-hero2-slide-item {
-		img {
-			transform: scale(1) translateX(0px);
+		.ax-hero2-bg {
+			filter: blur(0px);
+			transform: scale(1);
+			img {
+				transition-delay: 500ms;
+				transform: scale(1.7) translateX(0px);
+			}
+		}
+		.item-circle {
+			circle:nth-child(2) {
+				transition: all 7s cubic-bezier(.216, .416, .25, 1);
+				transition-delay: 1s;
+				stroke-dashoffset: 0px;
+			}
 		}
 		.ax-hero2-text {
 			.hero-slug {

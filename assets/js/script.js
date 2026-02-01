@@ -184,10 +184,9 @@ Last change:    00/00/00
 						slidesPerView: 1,
 						effect: "fade",
 						loop: true,
-						// autoplay: {
-						// 	enabled: true,
-						// 	delay: 1000
-						// },
+						autoplay: {
+							delay: 6000,
+						},
 						speed: 1000,
 						pagination: {
 							el: ".ax-hr2-pagi",
@@ -857,8 +856,8 @@ Last change:    00/00/00
 			strokeDashoffset: 0,
 			scrollTrigger: {
 				trigger: ".ax-btn-cir",
-				start: "top 28%",
-				end: "top -20%",
+				start: "top 40%",
+				end: "top -80%",
 				scrub: true,
 				markers: false
 			}
@@ -934,7 +933,39 @@ Last change:    00/00/00
 	};
 
 
+	var AXC = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-ab2-content",
+			start: "top 30%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC
+	.from(".ax-ab2-img-wrap .ax-ab2-client .top-wrap li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
 
+	var AXC2 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-wc2-item3 .item-img ul",
+			start: "top 90%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC2
+	.from(".ax-wc2-item3 .item-img ul li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
 
 
 })(jQuery);
