@@ -46,6 +46,9 @@
 				transform: rotate(-45deg);
 				color: var(--ax-prime-c2);
 			}
+			&:hover {
+				color: var(--ax-prime-c2);
+			}
 		}
 	}
 }
@@ -106,6 +109,13 @@
 			font-weight: 500;
 			i {
 				transform: rotate(-45deg);
+				transition: all 300ms ease-in-out;
+			}
+			&:hover {
+				letter-spacing: 1px;
+				i {
+					transform: rotate(0);
+				}
 			}
 		}
 	}

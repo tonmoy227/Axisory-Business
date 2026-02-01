@@ -150,6 +150,7 @@
 		content: '';
 		height: 100%;
 		position: absolute;
+		transition: all 500ms ease-in-out;
 		background-color: var(--ax-prime-c2);
 	}
 	.item-wrap {
@@ -184,10 +185,21 @@
 			border-radius: 16px;
 			margin-left: -10px;
 			border: 4px solid #FFFFFF;
+			transition: all 500ms ease-in-out;
 			background-color: var(--ax-title-color2);
 			&:nth-child(2) {
 				z-index: -2;
 				position: relative;
+			}
+		}
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+		.icon-pair {
+			.item-icon {
+				transform: scale(-1.0);
 			}
 		}
 	}

@@ -130,8 +130,11 @@
 		top: 50%;
 		right: 0;
 		gap: 22px;
+		opacity: 0;
+		visibility: visible;
 		position: absolute;
-		transform: translateY(-50%);
+		transform: translateY(-100%);
+		transition: all 500ms ease-in-out;
 		@media #{$sm,$xs,$xxs} {
 			margin-top: 20px;
 			position: static;
@@ -159,6 +162,9 @@
 			i {
 				transform: rotate(-45deg);
 			}
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	.ax-tm-img {
@@ -170,6 +176,13 @@
 		@media #{$xxs} {
 			width: 130px;
 			height: 130px;
+		}
+	}
+	&:hover {
+		.ax-tm-btn-grp {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(-50%);
 		}
 	}
 }
