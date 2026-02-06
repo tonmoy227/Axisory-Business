@@ -822,7 +822,7 @@ Last change:    00/00/00
 
 			Vertex
 			.set(el, {transformOrigin: 'top bottom'})
-			.fromTo(el, { x: 0  }, { x: -800 , duration: 30, immediateRender: false})
+			.fromTo(el, { x: 0  }, { x: -600 , duration: 30, immediateRender: false})
 		});
 
 
@@ -840,7 +840,7 @@ Last change:    00/00/00
 
 			Vertex
 			.set(el, {transformOrigin: 'top bottom'})
-			.fromTo(el, { x: 0  }, { x: 500 , duration: 30, immediateRender: false})
+			.fromTo(el, { x: 0  }, { x: 400 , duration: 30, immediateRender: false})
 		});
 	}
 	if($(".ax-project2-wrapper").length) {

@@ -137,6 +137,17 @@
 	position: absolute;
 	background-color: var(--ax-prime-c2);
 	transform: translateX(-50%) translateY(-50%);
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 100%;
+		position: absolute;
+		border-radius: 100%;
+		border: 10px  solid #000;
+	}
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		display: none !important;
 	}

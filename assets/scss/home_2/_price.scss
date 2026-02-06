@@ -168,6 +168,9 @@
 		display: none;
 	}
 	&:is(.popular) {
+		.ax-pri-shape1 {
+			opacity: .3;
+		}
 		.toggle {
 			background-color: #fff;
 		}

@@ -506,6 +506,12 @@ a {
 			background-color: #051229;
 		}
 	}
+	&:is(.ver_3) {
+		span {
+			color: #000;
+			background-color: var(--ax-prime-c3);
+		}
+	}
 }
 
 .ax-btn3 {
