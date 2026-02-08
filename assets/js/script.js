@@ -278,77 +278,78 @@ Last change:    00/00/00
 
 		});
 	}
-	document.addEventListener("DOMContentLoaded", () => {
-		const e = document.getElementById("filt-monthly"),
-		d = document.getElementById("filt-hourly"),
-		t = document.getElementById("switcher"),
-		m = document.getElementById("monthly"),
-		y = document.getElementById("hourly");
+	if ($('.ax-price2-sec, .ax-price1-sec').length > 0 ) {
+		document.addEventListener("DOMContentLoaded", () => {
+			const e = document.getElementById("filt-monthly"),
+			d = document.getElementById("filt-hourly"),
+			t = document.getElementById("switcher"),
+			m = document.getElementById("monthly"),
+			y = document.getElementById("hourly");
 
-		if (!e || !d || !t || !m || !y) {
-			console.warn("Toggle elements not found in DOM");
-			return;
-		}
-
-		const activate = (mode) => {
-			const isHourly = mode === "hourly";
-			t.checked = isHourly;
-			e.classList.toggle("toggler--is-active", !isHourly);
-			d.classList.toggle("toggler--is-active", isHourly);
-			m.classList.toggle("hide", isHourly);
-			y.classList.toggle("hide", !isHourly);
-		};
-
-		e.addEventListener("click", () => activate("monthly"));
-		d.addEventListener("click", () => activate("hourly"));
-		t.addEventListener("click", () => activate(t.checked ? "hourly" : "monthly"));
-	});
-
-	const priceGroup = document.querySelector('.ax-price1-grp');
-
-	if (priceGroup) {
-		priceGroup.querySelectorAll('.toggler, .toggle').forEach(el => {
-			el.addEventListener('click', () => {
-				priceGroup.classList.toggle('active');
-			});
-		});
-	}
-
-
-	document.addEventListener("DOMContentLoaded", () => {
-		document.querySelectorAll(".price-toggle").forEach((wrap) => {
-
-			const monthlyBtn = wrap.querySelector(".toggler--monthly");
-			const hourlyBtn  = wrap.querySelector(".toggler--hourly");
-			const switcher   = wrap.querySelector(".switcher");
-			const monthlyBox = wrap.querySelector(".monthly");
-			const hourlyBox  = wrap.querySelector(".hourly");
-
-			if (!monthlyBtn || !hourlyBtn || !switcher || !monthlyBox || !hourlyBox) {
-				console.warn("Toggle elements missing in one pricing block");
+			if (!e || !d || !t || !m || !y) {
+				console.warn("Toggle elements not found in DOM");
 				return;
 			}
 
 			const activate = (mode) => {
 				const isHourly = mode === "hourly";
-
-				switcher.checked = isHourly;
-
-				monthlyBtn.classList.toggle("toggler--is-active", !isHourly);
-				hourlyBtn.classList.toggle("toggler--is-active", isHourly);
-
-				monthlyBox.classList.toggle("hide", isHourly);
-				hourlyBox.classList.toggle("hide", !isHourly);
+				t.checked = isHourly;
+				e.classList.toggle("toggler--is-active", !isHourly);
+				d.classList.toggle("toggler--is-active", isHourly);
+				m.classList.toggle("hide", isHourly);
+				y.classList.toggle("hide", !isHourly);
 			};
 
-			monthlyBtn.addEventListener("click", () => activate("monthly"));
-			hourlyBtn.addEventListener("click", () => activate("hourly"));
-			switcher.addEventListener("click", () =>
-				activate(switcher.checked ? "hourly" : "monthly")
-				);
+			e.addEventListener("click", () => activate("monthly"));
+			d.addEventListener("click", () => activate("hourly"));
+			t.addEventListener("click", () => activate(t.checked ? "hourly" : "monthly"));
 		});
-	});
 
+		const priceGroup = document.querySelector('.ax-price1-grp');
+
+		if (priceGroup) {
+			priceGroup.querySelectorAll('.toggler, .toggle').forEach(el => {
+				el.addEventListener('click', () => {
+					priceGroup.classList.toggle('active');
+				});
+			});
+		}
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+			document.querySelectorAll(".price-toggle").forEach((wrap) => {
+
+				const monthlyBtn = wrap.querySelector(".toggler--monthly");
+				const hourlyBtn  = wrap.querySelector(".toggler--hourly");
+				const switcher   = wrap.querySelector(".switcher");
+				const monthlyBox = wrap.querySelector(".monthly");
+				const hourlyBox  = wrap.querySelector(".hourly");
+
+				if (!monthlyBtn || !hourlyBtn || !switcher || !monthlyBox || !hourlyBox) {
+					console.warn("Toggle elements missing in one pricing block");
+					return;
+				}
+
+				const activate = (mode) => {
+					const isHourly = mode === "hourly";
+
+					switcher.checked = isHourly;
+
+					monthlyBtn.classList.toggle("toggler--is-active", !isHourly);
+					hourlyBtn.classList.toggle("toggler--is-active", isHourly);
+
+					monthlyBox.classList.toggle("hide", isHourly);
+					hourlyBox.classList.toggle("hide", !isHourly);
+				};
+
+				monthlyBtn.addEventListener("click", () => activate("monthly"));
+				hourlyBtn.addEventListener("click", () => activate("hourly"));
+				switcher.addEventListener("click", () =>
+					activate(switcher.checked ? "hourly" : "monthly")
+					);
+			});
+		});
+	};
 	// Project Slider //
 	if ($('.ax-cs-slider').length > 0 ) {
 		var slider = new Swiper('.ax-cs-slider', {
@@ -966,6 +967,35 @@ Last change:    00/00/00
 		duration: 1, 
 		stagger: -.2,
 	})
+
+
+	if ($(".progress-bar").length) {
+		$(".progress-bar").appear(function () {
+			var current_item = $(this);
+
+			if (current_item.hasClass("appeared")) return;
+
+			var percent = parseInt(current_item.data("percent"), 10);
+			current_item.addClass("appeared").css("width", percent + "%");
+
+			var $counter = $("<span>0%</span>");
+			current_item.parent().append($counter);
+
+			var count = 0;
+			var speed = 20; 
+
+			var interval = setInterval(function () {
+				count++;
+				$counter.text(count + "%");
+
+				if (count >= percent) {
+					clearInterval(interval);
+					$counter.text(percent + "%");
+				}
+			}, speed);
+		});
+	}
+
 
 
 })(jQuery);
