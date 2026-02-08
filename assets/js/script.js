@@ -184,10 +184,9 @@ Last change:    00/00/00
 						slidesPerView: 1,
 						effect: "fade",
 						loop: true,
-						// autoplay: {
-						// 	enabled: true,
-						// 	delay: 1000
-						// },
+						autoplay: {
+							delay: 6000,
+						},
 						speed: 1000,
 						pagination: {
 							el: ".ax-hr2-pagi",
@@ -613,6 +612,9 @@ Last change:    00/00/00
 		stagger: -.2,
 	})
 
+
+
+
 	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -620,6 +622,23 @@ Last change:    00/00/00
 				scrub: 4,
 				start: "top 100%",
 				end: "top 30%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, y: "300"})
+	});
+
+	gsap.utils.toArray(' .top_view8').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 20%",
+				end: "top 0%",
 				toggleActions: "play none none reverse",
 				markers: false
 			}
@@ -803,7 +822,7 @@ Last change:    00/00/00
 
 			Vertex
 			.set(el, {transformOrigin: 'top bottom'})
-			.fromTo(el, { x: 0  }, { x: -800 , duration: 30, immediateRender: false})
+			.fromTo(el, { x: 0  }, { x: -600 , duration: 30, immediateRender: false})
 		});
 
 
@@ -821,7 +840,7 @@ Last change:    00/00/00
 
 			Vertex
 			.set(el, {transformOrigin: 'top bottom'})
-			.fromTo(el, { x: 0  }, { x: 500 , duration: 30, immediateRender: false})
+			.fromTo(el, { x: 0  }, { x: 400 , duration: 30, immediateRender: false})
 		});
 	}
 	if($(".ax-project2-wrapper").length) {
@@ -837,8 +856,8 @@ Last change:    00/00/00
 			strokeDashoffset: 0,
 			scrollTrigger: {
 				trigger: ".ax-btn-cir",
-				start: "top 28%",
-				end: "top -20%",
+				start: "top 40%",
+				end: "top -80%",
 				scrub: true,
 				markers: false
 			}
@@ -849,8 +868,12 @@ Last change:    00/00/00
 		var swiper3 = new Swiper(".ax-tst-thumb-slider", {
 			speed: 500,
 			loop: true,
-			slideToClickedSlide: true,
+			autoplay: {
+				delay: 6000,
+			},
+			slideToClickedSlide: false,
 			centeredSlides: true,
+			allowTouchMove: false,
 			breakpoints: {
 				0: {
 					slidesPerView: 5,
@@ -877,14 +900,72 @@ Last change:    00/00/00
 			fadeEffect: {
 				crossFade: true
 			},
-			// autoplay: {
-			// 	delay: 6000,
-			// },
+			autoplay: {
+				delay: 6000,
+			},
 			thumbs: {
 				swiper: swiper3,
 			},
 
 		});
 	}
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var WHYchoose = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.ax-why-c2-content',
+				start: "top 70%",
+				end: "top 20%",
+				scrub: 1,
+				markers: false,
+			}
+
+		});
+		WHYchoose
+		.from( ".ax-wc2-item2 .item-item .hand-img1" , {   x: -300,   duration: 2, ease: "power2.out"})
+		.from( ".ax-wc2-item2 .item-item .hand-img2" , {   x: 300,   duration: 2, ease: "power2.out"},"< .5")
+		.from( ".ax-wc2-item2 .item-img-wrap li:nth-child(2)" , { opacity: 0,  x: 100, rotate: 15,   duration: 2, ease: "power2.out"},"< .5")
+		.from( ".ax-wc2-item2 .item-img-wrap li:nth-child(4)" , { opacity: 0,  x: 100, rotate: 15,   duration: 2, ease: "power2.out"},"< .5")
+		.from( ".ax-wc2-item2 .item-img-wrap li:nth-child(3)" , { opacity: 0,  x: -100, rotate: -15,   duration: 2, ease: "power2.out"},"< .5")
+		.from( ".ax-wc2-item2 .item-img-wrap li:nth-child(5)" , { opacity: 0,  x: -100, rotate: -15,   duration: 2, ease: "power2.out"},"< .5")
+
+	};
+
+
+	var AXC = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-ab2-content",
+			start: "top 30%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC
+	.from(".ax-ab2-img-wrap .ax-ab2-client .top-wrap li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
+
+	var AXC2 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-wc2-item3 .item-img ul",
+			start: "top 90%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC2
+	.from(".ax-wc2-item3 .item-img ul li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
+
 
 })(jQuery);

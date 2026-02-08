@@ -342,9 +342,45 @@
 		border-bottom: 1px solid #0000001A;
 		.header-content {
 			padding-left: 20px;
+			.brand-logo {
+				&:before {
+					top: 20px;
+					width: 80px;
+					height: 1px;
+					content: '';
+					right: -190px;
+					position: absolute;
+					background-color: #0000001A;
+					@media #{$xs,$xxs} {
+						display: none;
+					}
+				}
+				.logo-shape {
+					top: 8px;
+					width: 24px;
+					height: 24px;
+					right: -215px;
+					position: absolute;
+					border-radius: 100%;
+					border: 1px solid #0000001A;
+					@media #{$xs,$xxs} {
+						display: none;
+					} 
+					&:after {
+						top: 7px;
+						right: 7px;
+						width: 8px;
+						height: 8px;
+						content: '';
+						border-radius: 100%;
+						position: absolute;
+						background-color: var(--ax-prime-c2);
+					}
+				}
+			}
 			.header-cta {
 				width: 100%;
-				max-width: 1146px;
+				max-width: 1090px;
 				@media #{$xl,$lg} {
 					max-width: 918px;
 				}
@@ -362,6 +398,7 @@
 						display: none !important;
 					}
 					a {
+						font-size: 14px;
 						margin-right: 32px;
 						white-space: nowrap;
 						color: var(--ax-prime-c2);
@@ -371,6 +408,9 @@
 						span {
 							color: #041427;
 							margin-right: 5px;
+						}
+						&:hover {
+							color: #000;
 						}
 					}
 				}
@@ -424,39 +464,131 @@
 				a {
 					gap: 12px;
 					display: flex;
+					position: relative;
 					align-items: center;
+					&:before {
+						top: 16px;
+						left: -100px;
+						width: 80px;
+						content: '';
+						height: 1px;
+						position: absolute;
+						background-color: #FFFFFF99;
+					}
 					span {
 						color: #fff;
 						font-size: 14px;
 						white-space: nowrap;
 						padding: 9px 16px 8px;
 						background-color: #FFFFFF1A;
+						transition: all 400ms ease-in-out;
 					}
-					i {
-						width: 38px;
-						height: 38px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						background-color: #FFFFFF1A;
-						svg {
-							opacity: .8;
-							transition: all 500ms ease-in-out;
-							transform: translateX(-54px) translateY(90px) scale(3.5);
-							@media #{$lg,$md,$sm,$xs,$xxs} {
-								opacity: 1;
-								transform: translateX(0px) translateY(0px) scale(1);
-							}
-						}
-					}
-
 					&:hover {
-						i {
-							svg {
-								opacity: 1;
-								transform: translateX(0px) translateY(0px) scale(1);
-							}
+						span {
+							color: var(--mx-prime-c2);
+							background-color: #FFFFFF;
 						}
+					}
+				}
+			}
+		}
+	}
+	&:is(.header_style_three) {
+		.header-content {
+			.brand-logo {
+				width: 100%;
+				max-width: 229px;
+				background-color: #fff;
+			}
+			.cta-menu-wrap {
+				width: 100%;
+			}
+			.header-cta {
+				padding: 8px 55px;
+				background-color: var(--ax-prime-c2);
+				.item-cta {
+					a {
+						color: #fff;
+						font-weight: 500;
+						margin-right: 20px;
+						&:last-child {
+							margin-right: 0;
+						}
+						i {
+							margin-right: 4px;
+							color: var(--ax-prime-c3);
+						}
+					}
+				}
+
+				.item-social {
+					a {
+						color: #fff;
+						margin-left: 15px;
+						&:hover {
+							color: var(--ax-prime-c3);
+						}
+					}
+				}
+			}
+			.menu-cta-btn {
+				padding-top: 16px;
+				padding-left: 25px;
+				padding-bottom: 16px;
+				padding-right: 52px;
+				border-bottom: 1px solid #FFFFFF4D;
+			}
+			.main-navigation {
+				li {
+					margin: 0px 27px;
+					a {
+						color: #fff;
+						font-weight: 500;
+						letter-spacing: -.5px;
+					}
+				}
+			}
+			.btn-search {
+				gap: 12px;
+			}
+			.hd-search {
+				width: 240px;
+				position: relative;
+				input {
+					width: 100%;
+					height: 44px;
+					font-weight: 500;
+					color: #FFFFFF99;
+					padding-left: 20px;
+					border-radius: 14px;
+					border: 1px solid #4C5463;
+					background-color: transparent;
+					&::placeholder {
+						font-weight: 500;
+						color: #FFFFFF99;
+					}
+				}
+				button {
+					top: 4px;
+					right: 4px;
+					padding: 0;
+					width: 36px;
+					border: none;
+					height: 36px;
+					border-radius: 12px;
+					position: absolute;
+					background-color: #263355;
+				}
+			}
+			.ax-btn2 {
+				a {
+					i {
+						width: 44px;
+						height: 44px;
+					}
+					span {
+						border-radius: 14px;
+						padding: 10px 20px;
 					}
 				}
 			}
