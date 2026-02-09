@@ -442,10 +442,10 @@ Last change:    00/00/00
 	};
 
 
-	if ($('.ax-cs-slider').length > 0 ) {
-		var slider = new Swiper('.ax-cs-slider', {
-			spaceBetween: 28,
-			slidesPerView: 3,
+	if ($('.ax-project3-slider').length > 0 ) {
+		var slider = new Swiper('.ax-project3-slider', {
+			spaceBetween: 24,
+			slidesPerView: 4,
 			loop: true,
 			autoplay: {
 				enabled: true,
@@ -453,12 +453,12 @@ Last change:    00/00/00
 			},
 			speed: 1000,
 			pagination: {
-				el: ".ax-cs-pagi",
+				el: ".ax-pro3-pagi",
 				clickable: true,
 			},
 			breakpoints: {
 				'1200': {
-					slidesPerView: 3,
+					slidesPerView: 4,
 				},
 				'840': {
 					slidesPerView: 2,
