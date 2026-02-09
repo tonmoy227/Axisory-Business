@@ -7,7 +7,7 @@ Font load
 	--ax-body-color: #4C5258;
 	--ax-body-color2: #313130;
 	--ax-title-color: #0D1B2A;
-	--ax-title-color2: #051229;
+	--ax-title-color2: #041427;
 	--ax-mona: "Mona Sans", sans-serif;
 	--ax-dm: "DM Sans", sans-serif;
 	--ax-inter: "Inter", sans-serif;
@@ -15,11 +15,11 @@ Font load
 	--ax-color1: #55D7EA;
 	--ax-color2: #0136FF;
 	--ax-prime-c2: #1D1EE3;
-	--ax-prime-c3: #B4E717;
+	--ax-prime-c3: #9588F8;
 	--ax-gradient1: linear-gradient(90deg, var(--ax-color1) 0%, var(--ax-color2) 100%); 
 	--ax-gradient2: linear-gradient(90deg, var(--ax-color2) 0%, var(--ax-color1) 100%); 
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
-	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
+	--cube-2:  cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
 }
 

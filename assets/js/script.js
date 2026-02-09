@@ -998,4 +998,48 @@ Last change:    00/00/00
 
 
 
+
+	const accordionItems = document.querySelectorAll('.ax-trust-accordion .accordion-item');
+	accordionItems.forEach(item => {
+		const btn = item.querySelector('.ax-trust-accordion .accordion-button');
+		btn.addEventListener('click', () => {
+			accordionItems.forEach(i => i.classList.remove('active'));
+			setTimeout(() => {
+				if (!btn.classList.contains('collapsed')) {
+					item.classList.add('active');
+				}
+			}, 200);
+		});
+	});
+
+
+	function AXSER3() {
+		$('.ax-ser3-item__head').on('click', function (e) {
+			e.preventDefault();
+
+			let $parent = $(this).parent();
+			let $body = $parent.find('.ax-ser3-item__body');
+			let $icon = $parent.find('.item-icon');
+			let currentIndex = $parent.attr('data-item');
+
+			$('.ax-ser3-img').removeClass('active');
+			$(`.ax-ser3-img[data-item=${currentIndex}]`).addClass('active');
+
+			if ($parent.hasClass('active')) {
+				$body.stop().slideUp('fast');
+				$icon.stop().slideUp('fast');
+				$parent.removeClass('active');
+			} else {
+				$('.ax-ser3-item__body').stop().slideUp('fast');
+				$('.item-icon').stop().slideUp('fast');
+				$('.ax-ser3-item').removeClass('active');
+
+				$body.stop().slideDown('fast');
+				$icon.stop().slideDown('fast');
+				$parent.addClass('active');
+			}
+		});
+	}
+	AXSER3();
+
 })(jQuery);

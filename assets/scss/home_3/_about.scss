@@ -3,7 +3,7 @@
 }
 .ax-ab3-wrap {
 	border-radius: 40px;
-	background-color: #EDF2F8;
+	background-color: #F5F4FF;
 }
 
 .ax-ab3-top {
@@ -129,52 +129,34 @@
 	max-width: 437px;
 	border-radius: 20px;
 	padding: 40px 32px;
+	flex-direction: column;
 	background-color: #fff;
-	.skill-set-percent {
-		margin-bottom: 30px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-		&:nth-child(2) {
-			 .progress-bar {
-			 	background-color: var(--ax-prime-c2);
-			}
-		}
-	}
-	.skill-set-percent h4 {
-		color: #313130;
-		font-size: 22px;
-		font-weight: 500;
-		letter-spacing: -1px;
-		padding-bottom: 15px;
-	}
-	.skill-set-percent .progress {
-		height: 6px;
-		overflow: visible;
-		border-radius: 12px;
-		position: relative;
-		background-color: #EDF2F8;
-	}
-	.skill-set-percent .progress span {
-		right: 0;
-		color: #051229;
-		top: -43px;
-		font-size: 22px;
-		font-weight: 600;
+	i {
+		top: -10px;
+		right: -15%;
 		position: absolute;
 	}
-	.skill-set-percent .progress-bar {
-		width: 0;
-		left: 0px;
-		top: 0px;
-		float: left;
-		height: 6px;
-		position: relative;
-		border-radius: 0;
-		border-radius: 12px;
-		-webkit-transition: 1s all ease-in-out;
-		transition: 1s all ease-in-out;
-		background-color: #051229;
+	.item-top {
+		h3 {
+			font-size: 40px;
+			font-weight: 600;
+			letter-spacing: -2px;
+			padding-bottom: 5px;
+		}
+		p {
+			letter-spacing: -.5px;
+		}
+	}
+	.item-bottom {
+		h3 {
+			font-size: 24px;
+			font-weight: 600;
+			letter-spacing: -1px;
+			padding-bottom: 5px;
+		}
+		p {
+			letter-spacing: -.5px;
+		}
 	}
 }
 
@@ -184,7 +166,7 @@
 	max-width: 322px;
 	padding: 30px 32px;
 	border-radius: 20px;
-	background-color: var(--ax-prime-c2);
+	background: linear-gradient(180deg, #343472 0%, #8173E0 100%);
 	.ax-pri-shape1 {
 		right: -30%;
 		bottom: -30%;

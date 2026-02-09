@@ -505,10 +505,10 @@
 			}
 			.header-cta {
 				padding: 8px 55px;
-				background-color: var(--ax-prime-c2);
+				background-color: #fff;
 				.item-cta {
 					a {
-						color: #fff;
+						color: #041427;
 						font-weight: 500;
 						margin-right: 20px;
 						&:last-child {
@@ -523,7 +523,7 @@
 
 				.item-social {
 					a {
-						color: #fff;
+						color: #041427;
 						margin-left: 15px;
 						&:hover {
 							color: var(--ax-prime-c3);

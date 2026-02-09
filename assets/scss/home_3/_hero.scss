@@ -84,7 +84,7 @@
 		transform: translateY(-50%);
 		border-right: 4px solid #fff;
 		justify-content: space-between;
-		background-color: var(--ax-prime-c2);
+		background: linear-gradient(90deg, #343472 0%, #8173E0 100%);
 		.ax-hr3-shape3 {
 			left: -40%;
 			top: 58%;
@@ -135,8 +135,8 @@
 			width: 30px;
 			position: absolute;
 			border-right: 4px solid #fff;
-			background-color: var(--ax-prime-c2);
 			transform: translateY(-50%);
+			background: linear-gradient(270deg, #343472 0%, #8173E0 100%);
 		}
 	}
 	.ax-hr3-img3 {

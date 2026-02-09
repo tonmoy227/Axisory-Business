@@ -363,6 +363,10 @@ a {
 		margin-bottom: 10px;
 		letter-spacing: -.5px;
 		color: var(--ax-prime-c2);
+		&:is(.ver_2) {
+			font-weight: 500;
+			color: var(--ax-title-color2);
+		}
 	}
 	.sec_title {
 		font-size: 44px;
@@ -508,7 +512,16 @@ a {
 	}
 	&:is(.ver_3) {
 		span {
-			color: #000;
+			color: #fff;
+			background-color: var(--ax-prime-c3);
+		}
+	}
+	&:is(.ver_4) {
+		span {
+			color: #fff;
+			background-color: var(--ax-title-color2);
+		}
+		i {
 			background-color: var(--ax-prime-c3);
 		}
 	}
