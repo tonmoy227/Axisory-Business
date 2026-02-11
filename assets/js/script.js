@@ -447,14 +447,18 @@ Last change:    00/00/00
 			spaceBetween: 24,
 			slidesPerView: 4,
 			loop: true,
-			autoplay: {
-				enabled: true,
-				delay: 6000
-			},
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 6000
+			// },
 			speed: 1000,
 			pagination: {
 				el: ".ax-pro3-pagi",
 				clickable: true,
+			},
+			navigation: {
+				nextEl: ".ax-pro3-next",
+				prevEl: ".ax-pro3-prev",
 			},
 			breakpoints: {
 				'1200': {
@@ -1041,5 +1045,57 @@ Last change:    00/00/00
 		});
 	}
 	AXSER3();
+
+
+	$(document).on("mousemove", function (e) {
+		$(".cursor-outline, .cursor-dot").css({
+			top: e.clientY,
+			left: e.clientX
+		});
+	});
+
+	var headlineElements = $(".ax-text-scr3");
+
+	headlineElements.on("mouseenter", function () {
+		$(".ax-shadow").addClass("highlight-cursor-head");
+	});
+
+	headlineElements.on("mouseleave", function () {
+		$(".ax-shadow").removeClass("highlight-cursor-head");
+	});
+
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		document.querySelectorAll('.ax-trigger-section').forEach((section) => {
+			let SecTitle = gsap.timeline({
+				scrollTrigger: {
+					trigger: section,
+					start: "top -5%",
+					end: "top -100%",
+					scrub: 1,
+					pin: false,
+					pinSpacing: false,
+					markers: false,
+				}
+			});
+
+			SecTitle.from(section.querySelector('.ax-team4-item._1'), { y: -1180, x: -50, filter: "blur(6px)", scale: .2, duration: 1, ease: "power2.out"});
+			SecTitle.from(section.querySelector('.ax-team4-item._5'), { y: -1180,  x: 50, filter: "blur(6px)", scale: .2, duration: 1, ease: "power2.out"},"< ");
+			SecTitle.from(section.querySelector('.ax-team4-item._2'), { y: -720,  x: -350, filter: "blur(6px)", scale: .2, duration: 1, ease: "power2.out"},"< ");
+			SecTitle.from(section.querySelector('.ax-team4-item._4'), { y: -720,  x: 360, filter: "blur(6px)", scale: .2, duration: 1, ease: "power2.out"},"< ");
+			SecTitle.from(section.querySelector('.ax-team4-item._3'), { y: -950,   filter: "blur(6px)", scale: .2, duration: 1, ease: "power2.out"},"< ");
+		});
+	}
+
+	document.querySelectorAll(".ax-team3-content").forEach((item) => {
+		ScrollTrigger.create({
+			trigger: item,
+			start: "top 45%",  
+			toggleClass: { targets: item, className: "active" },
+			once: false,
+			markers: false,
+		});
+	});
 
 })(jQuery);
