@@ -484,6 +484,50 @@ Last change:    00/00/00
 		});
 	};
 
+	if ($('.ax-testi3-slider').length > 0 ) {
+		var slider = new Swiper('.ax-testi3-slider', {
+			spaceBetween: 12,
+			slidesPerView: 4,
+			loop: true,
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 6000
+			// },
+			speed: 1000,
+			pagination: {
+				el: ".ax-testi3-pagi",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".ax-testi3-next",
+				prevEl: ".ax-testi3-prev",
+			},
+			breakpoints: {
+				'1200': {
+					slidesPerView: 4,
+				},
+				'840': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+			},
+		});
+	};
+
+
+
 	function afterPageLoad() {
 		CustomEase.create("ease1", "0, 0, 0.2, 1");
 
