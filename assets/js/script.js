@@ -486,21 +486,21 @@ Last change:    00/00/00
 
 	if ($('.ax-testi3-slider').length > 0 ) {
 		var slider = new Swiper('.ax-testi3-slider', {
-			spaceBetween: 12,
+			spaceBetween: 0,
 			slidesPerView: 4,
 			loop: true,
-			// autoplay: {
-			// 	enabled: true,
-			// 	delay: 6000
-			// },
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
 			speed: 1000,
 			pagination: {
 				el: ".ax-testi3-pagi",
 				clickable: true,
 			},
 			navigation: {
-				nextEl: ".ax-testi3-next",
 				prevEl: ".ax-testi3-prev",
+				nextEl: ".ax-testi3-next",
 			},
 			breakpoints: {
 				'1200': {
