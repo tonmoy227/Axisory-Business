@@ -3,6 +3,9 @@
 	background-color: #F5F4FF;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin: 0;
+	}
 }
 
 
@@ -30,11 +33,17 @@
 }
 .ax-increase-content {
 	gap: 40px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 
 .ax-increase-text-wrap {
 	width: 100%;
 	max-width: 553px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	.item-number {
 		margin-bottom: 44px;
 		h3 {
@@ -109,6 +118,9 @@
 .ax-increase-progress {
 	width: 100%;
 	max-width: 691px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 }
 
 .ax-ins-pro-bar {
@@ -118,6 +130,10 @@
 		border-radius: 20px;
 		padding: 16px 32px 28px;
 		background-color: var(--ax-prime-c3);
+		@media #{$xs,$xxs} {
+			gap: 20px;
+			width: 100% !important;
+		}
 		b {
 			color: #fff;
 			font-size: 32px;

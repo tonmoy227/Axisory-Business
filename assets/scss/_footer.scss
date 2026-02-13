@@ -241,6 +241,7 @@
 				}
 			}
 		}
+
 	}
 }
 
@@ -432,6 +433,16 @@
 					}
 				}
 			}
+			&:is(.ver_2) {
+				a {
+					&:hover {
+						border-bottom: 1px solid var(--ax-prime-c3);
+						span {
+							background-color: var(--ax-prime-c3);
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -447,6 +458,17 @@
 				letter-spacing: -.5px;
 				&:hover {
 					color: var(--ax-prime-c2);
+				}
+			}
+		}
+		&:is(.ver_2) {
+			li {
+				a {
+					opacity: .8;
+					color: #E5E5E5;
+					&:hover {
+						color: var(--ax-prime-c3);
+					}
 				}
 			}
 		}
@@ -466,11 +488,84 @@
 			width: 100px;
 			background-color: #FFFFFF33;
 		}
+		&:is(.ver_2) {
+			i {
+				height: 2px;
+				width: 50px;
+				background-color: var(--ax-prime-c3);
+			}
+		}
+	}
+	.news-widget {
+		p {
+			color: #E5E5E5;
+			padding-bottom: 30px;
+		}
+		form {
+			input {
+				width: 100%;
+				height: 48px;
+				color: #fff;
+				border-radius: 16px;
+				padding-left: 20px;
+				border: 1px solid #EDF2F833;
+				background-color: transparent;
+				&::placeholder {
+					color: #fff;
+					opacity: .6;
+				}
+			}
+			button {
+				padding: 0;
+				border: none;
+				display: flex;
+				margin-top: 12px;
+				background-color: transparent;
+				span {
+					color: #fff;
+					font-size: 16px;
+					font-weight: 500;
+					padding: 12px 20px;
+					border-radius: 14px;
+					background-color: var(--ax-prime-c3);
+					transition: all 300ms ease-in-out;
+				}
+				i {
+					width: 48px;
+					height: 48px;
+					display: flex;
+					font-size: 18px;
+					align-items: center;	
+					border-radius: 14px;
+					justify-content: center;
+					background-color: #fff;
+					color: var(--ax-prime-c3);
+					transition: all 300ms ease-in-out;
+					&:before {
+						transform: rotate(-45deg);
+					}
+				}
+				&:hover {
+					span {
+						color: var(--ax-prime-c3);
+						background-color: #fff;
+					}
+					i {
+						color: #fff;
+						background-color: var(--ax-prime-c3);
+					}
+				}
+			}
+		}
 	}
 }
 .ax-ftr2-content {
 	padding-bottom: 40px;
 	border-bottom: 1px solid #FFFFFF33;
+	&:is(.ver_2) {
+		border: none;
+		padding-bottom: 0;
+	}
 }
 .ax-ftr2-gallery {
 	gap: 20px;
@@ -554,7 +649,7 @@
 	position: relative;
 	&:before {
 		left: 0;
-		bottom: 0;
+		bottom: -22%;
 		z-index: -2;
 		width: 100%;
 		content: '';
@@ -564,12 +659,15 @@
 	}
 	.circle-shape {
 		left: 0;
-		bottom: 0;
+		bottom: -22%;
 		z-index: -1;
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.98) 100%);
 		clip-path: polygon( 50% 0%,50% 0%,77.457% 4.742%,103.503% 18.471%,127.79% 40.441%,149.969% 69.906%,169.693% 106.121%,186.611% 148.338%,200.377% 195.812%,210.641% 247.798%,217.055% 303.549%,219.271% 362.319%,219.271% 362.319%,217.055% 421.089%,210.641% 476.84%,200.377% 528.825%,186.611% 576.3%,169.693% 618.517%,149.969% 654.731%,127.79% 684.196%,103.503% 706.166%,77.457% 719.896%,50% 724.638%,50% 724.638%,22.543% 719.896%,-3.503% 706.166%,-27.79% 684.196%,-49.969% 654.731%,-69.693% 618.517%,-86.611% 576.3%,-100.377% 528.825%,-110.641% 476.84%,-117.055% 421.089%,-119.271% 362.319%,-119.271% 362.319%,-117.055% 303.549%,-110.641% 247.798%,-100.377% 195.812%,-86.611% 148.338%,-69.693% 106.121%,-49.969% 69.906%,-27.79% 40.441%,-3.503% 18.471%,22.543% 4.742%,50% 0% );
+		img {
+			opacity: .05;
+		}
 	}
 }
 
@@ -586,10 +684,17 @@
 	gap: 24px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$md} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 
 .ax-ftr3-news-item {
 	z-index: 1;
+
 	position: relative;
 	&:before,
 	&:after {
@@ -651,6 +756,8 @@
 	margin: 0 auto;
 	max-width: 783px;
 	margin-top: -50px;
+	gap: 20px;
+	flex-wrap: wrap;
 	border-radius: 120px;
 	padding: 24px 24px 24px 40px;
 	border-bottom: 4px solid #FFFFFF;
@@ -673,3 +780,33 @@
 	}
 }
 
+.ax-ftrbottom-text {
+	margin-top: -70px;
+	margin-bottom: -80px;
+	h2 {
+		line-height: .8;
+		font-weight: 600;
+		font-size: 400px;
+		letter-spacing: -15px;
+		background: linear-gradient(180deg, rgba(229, 229, 229, 0.1) 25.94%, rgba(29, 30, 227, 0.1) 95.31%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.ax-copyright-3 {
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	background: linear-gradient(180deg, #343472 0%, #8173E0 100%);
+	p {
+		color: #fff;
+		a {
+			text-decoration: underline;
+		}
+	}
+	.inner-text {
+		gap: 15px 20px;
+		flex-wrap: wrap;
+		padding: 20px 0px;
+	}	
+}

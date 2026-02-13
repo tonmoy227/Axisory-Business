@@ -462,10 +462,10 @@ Last change:    00/00/00
 			spaceBetween: 24,
 			slidesPerView: 4,
 			loop: true,
-			// autoplay: {
-			// 	enabled: true,
-			// 	delay: 6000
-			// },
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
 			speed: 1000,
 			pagination: {
 				el: ".ax-pro3-pagi",
@@ -476,11 +476,11 @@ Last change:    00/00/00
 				prevEl: ".ax-pro3-prev",
 			},
 			breakpoints: {
-				'1200': {
+				'991': {
 					slidesPerView: 4,
 				},
 				'840': {
-					slidesPerView: 2,
+					slidesPerView: 1,
 					spaceBetween: 24,
 				},
 				'576': {
@@ -520,6 +520,9 @@ Last change:    00/00/00
 			breakpoints: {
 				'1200': {
 					slidesPerView: 4,
+				},
+				'991': {
+					slidesPerView: 3,
 				},
 				'840': {
 					slidesPerView: 2,
@@ -1145,25 +1148,26 @@ Last change:    00/00/00
 	}
 	AXSER3();
 
-
-	$(document).on("mousemove", function (e) {
-		$(".cursor-outline, .cursor-dot").css({
-			top: e.clientY,
-			left: e.clientX
+	if (window.matchMedia("(min-width: 1400px)").matches) { 
+		$(document).on("mousemove", function (e) {
+			$(".cursor-outline, .cursor-dot").css({
+				top: e.clientY,
+				left: e.clientX
+			});
 		});
-	});
 
-	var headlineElements = $(".ax-text-scr3");
+		var headlineElements = $(".ax-text-scr3");
 
-	headlineElements.on("mouseenter", function () {
-		$(".ax-shadow").addClass("highlight-cursor-head");
-	});
+		headlineElements.on("mouseenter", function () {
+			$(".ax-shadow").addClass("highlight-cursor-head");
+		});
 
-	headlineElements.on("mouseleave", function () {
-		$(".ax-shadow").removeClass("highlight-cursor-head");
-	});
+		headlineElements.on("mouseleave", function () {
+			$(".ax-shadow").removeClass("highlight-cursor-head");
+		});
 
 
+	}
 
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		document.querySelectorAll('.ax-trigger-section').forEach((section) => {

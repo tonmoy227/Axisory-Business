@@ -9,15 +9,25 @@
 	}
 }
 
+.ax-ser3-content {
+	gap: 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
 
 .ax-ser3-list {
 	max-width: 577px;
 	position: relative;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	&:before {
 		top: 0px;
 		left: 1px;
 		width: 1px;
-		height: 99%;
+		height: 90%;
 		content: '';
 		position: absolute;
 		background-color: #9588F84D;

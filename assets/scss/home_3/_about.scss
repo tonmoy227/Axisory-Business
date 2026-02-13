@@ -8,6 +8,8 @@
 
 .ax-ab3-top {
 	.ax-sec-title2 {
+		gap: 20px;
+		flex-wrap: wrap;
 		.sec_title {
 			max-width: 785px;
 		}
@@ -19,12 +21,20 @@
 	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
 		justify-content: center;
 	}
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 
 .ax-ab3-img-wrap {
 	max-width: 553px;
 	.item-img {
 		clip-path: polygon( 0% 3.333%,0% 3.333%,0.047% 2.793%,0.184% 2.28%,0.404% 1.801%,0.698% 1.365%,1.059% 0.976%,1.481% 0.643%,1.955% 0.372%,2.474% 0.17%,3.03% 0.044%,3.617% 0%,96.383% 0%,96.383% 0%,96.97% 0.044%,97.527% 0.17%,98.045% 0.372%,98.519% 0.643%,98.941% 0.976%,99.302% 1.365%,99.596% 1.801%,99.816% 2.28%,99.953% 2.793%,100% 3.333%,100% 96.667%,100% 96.667%,99.953% 97.207%,99.816% 97.72%,99.596% 98.199%,99.302% 98.635%,98.941% 99.024%,98.519% 99.357%,98.045% 99.628%,97.527% 99.83%,96.97% 99.956%,96.383% 100%,52.622% 100%,52.622% 100%,52.035% 99.956%,51.479% 99.83%,50.96% 99.628%,50.486% 99.357%,50.065% 99.024%,49.703% 98.635%,49.409% 98.199%,49.19% 97.72%,49.053% 97.207%,49.005% 96.667%,49.005% 64.833%,49.005% 64.833%,48.958% 64.293%,48.821% 63.78%,48.602% 63.301%,48.308% 62.865%,47.946% 62.476%,47.525% 62.143%,47.051% 61.872%,46.532% 61.67%,45.975% 61.544%,45.389% 61.5%,3.617% 61.5%,3.617% 61.5%,3.03% 61.456%,2.474% 61.33%,1.955% 61.128%,1.481% 60.857%,1.059% 60.524%,0.698% 60.135%,0.404% 59.699%,0.184% 59.22%,0.047% 58.707%,0% 58.167%,0% 3.333% );
+		@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+			clip-path: none;
+			overflow: hidden;
+			border-radius: 20px;
+		}
 	}
 	.item-exp {
 		left: 0;
@@ -69,13 +79,20 @@
 		right: -15px;
 	}
 	.card-top {
-		gap: 95px;
+		gap: 30px 95px;
 		margin-bottom: 75px;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
 		h3 {
 			line-height: .9;
 			font-size: 72px;
 			font-weight: 600;
+			white-space: nowrap;
 			letter-spacing: -2px;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				font-size: 60px;
+			}
 		}
 		.item-desc {
 			h4 {
@@ -102,6 +119,9 @@
 	}
 	.item-client {
 		gap: 24px;
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
 		li {
 			width: 60px;
 			height: 60px;
@@ -129,6 +149,9 @@
 }
 .ax-ab3-card2-wrap {
 	gap: 24px;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 .ax-ab3-card2 {
 	width: 100%;
@@ -137,12 +160,18 @@
 	padding: 40px 32px;
 	flex-direction: column;
 	background-color: #fff;
+	@media #{$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	i {
 		top: -10px;
 		right: -15%;
 		position: absolute;
 	}
 	.item-top {
+		@media #{$xxs} {
+			flex-wrap: wrap;
+		}
 		h3 {
 			font-size: 40px;
 			font-weight: 600;
@@ -154,6 +183,7 @@
 		}
 	}
 	.item-bottom {
+		margin-top: 30px;
 		h3 {
 			font-size: 24px;
 			font-weight: 600;
@@ -173,6 +203,9 @@
 	padding: 30px 32px;
 	border-radius: 20px;
 	background: linear-gradient(180deg, #343472 0%, #8173E0 100%);
+	@media #{$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	.ax-pri-shape1 {
 		right: -30%;
 		bottom: -30%;

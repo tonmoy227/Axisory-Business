@@ -10,6 +10,11 @@
 	max-width: 202%;
 	margin-left: -51%;
 	margin-right: -51%;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .ax-project3-item {
@@ -17,6 +22,12 @@
 	max-width: 668px;
 	position: relative;
 	padding-bottom: 126px;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin: 0 auto;
+	}
+	@media #{$xs,$xxs} { 
+		padding-bottom: 0;
+	}
 	.item-img {
 		overflow: hidden;
 		border-radius: 20px;
@@ -34,6 +45,11 @@
 		border: 4px solid #fff;
 		border-bottom: none;
 		transition: all 500ms ease-in-out;
+		@media #{$xs,$xxs} { 
+			width: 100%;
+			max-width: 100%;
+			position: static;
+		}
 		h3 {
 			color: #fff;
 			font-size: 24px;
@@ -66,13 +82,31 @@
 		}
 	}
 }
-
+.swiper-slide-active {
+	.ax-project3-item {
+		@media #{$md,$sm,$xs,$xxs} {
+			.item-text {
+				bottom: 0;
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 100ms;
+			}
+		}
+	}
+}
 .ax-pro3-nav-arrow {
 	z-index: 2;
 	margin-top: -78px;
 	position: relative;
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-top: 30px;
+		justify-content: center !important;
+	}
 	.nav-arrow  {
 		gap: 25px;
+		@media #{$xs,$xxs} {
+			gap: 15px;
+		}
 	}
 	.ax-pro3-prev,
 	.ax-pro3-next {
@@ -81,6 +115,9 @@
 		border-radius: 16px;
 		border: 1px solid #9BA0A9;
 		transition: all 300ms ease-in-out;
+		@media #{$xs,$xxs} {
+			display: none !important;
+		}
 		svg {
 			path {
 				transition: all 300ms ease-in-out;

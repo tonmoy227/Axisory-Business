@@ -19,6 +19,9 @@
 	margin-top: 60px;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
+	@media #{$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 .ax-whyc3-item {
 	height: 220px;
