@@ -1,6 +1,18 @@
 .ax-hero3-item {
 	position: relative;
 	padding: 328px 0px 284px;
+	@media #{$md} {
+		padding: 200px 0px 0px;
+	}
+	@media #{$sm} {
+		padding: 180px 0px 0px;
+	}
+	@media #{$xs} {
+		padding: 150px 0px 0px;
+	}
+	@media #{$xxs} {
+		padding: 150px 0px 0px;
+	}
 	.hero_shape {
 		top: 0;
 		left: 0;
@@ -52,6 +64,9 @@
 	}
 	.container {
 		max-width: 1605px;
+		@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			max-width: 1384px;
+		}
 	}
 	.ax-hr3-side1 {
 		top: 55%;
@@ -71,6 +86,9 @@
 			position: absolute;
 			background: #00002266;
 		}
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none !important;
+		}
 	}
 	.ax-hr3-side2 {
 		top: 55%;
@@ -85,6 +103,9 @@
 		border-right: 4px solid #fff;
 		justify-content: space-between;
 		background: linear-gradient(90deg, #343472 0%, #8173E0 100%);
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none !important;
+		}
 		.ax-hr3-shape3 {
 			left: -40%;
 			top: 58%;
@@ -113,6 +134,9 @@
 		height: 581px;
 		position: absolute;
 		transform: translateY(-50%);
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
 		.item-img {
 			width: 60px;
 			height: 100%;
@@ -142,11 +166,17 @@
 	.ax-hr3-img3 {
 		bottom: 0;
 		right: 256px;
+		@media #{$md,$sm,$xs,$xxs} {
+			margin-top: 40px;
+			position: static !important;
+		}
 	}
 }
 
 .ax-hr3-text {
+	z-index: 2;
 	max-width: 650px;
+	position: relative;
 	.slide-numb {
 		font-size: 24px;
 		font-weight: 700;
@@ -172,6 +202,15 @@
 		font-weight: 800;
 		margin-bottom: 12px;
 		letter-spacing: -2px;
+		@media #{$sm} {
+			font-size: 60px;
+		}
+		@media #{$xs} {
+			font-size: 50px;
+		}
+		@media #{$xxs} {
+			font-size: 45px;
+		}
 		span {
 			color: var(--ax-prime-c3);
 		}
@@ -200,6 +239,12 @@
 	bottom: 40px;
 	max-width: 778px;
 	position: absolute;
+	@media #{$md,$sm,$xs,$xxs} {
+		left: 0;
+		right: 0;
+		bottom: 30px;
+		max-width: 0 auto;
+	}
 }
 .ax-hr3-spon-left {
 	display: flow-root;

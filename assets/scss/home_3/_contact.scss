@@ -19,6 +19,7 @@
 .ax-cont3-card {
 	width: 100%;
 	margin: 0 auto;
+	margin-left: 24px;
 	max-width: 759px;
 	padding-top: 30px;
 	border-radius: 32px;
@@ -132,5 +133,18 @@
 		font-weight: 500;
 		border-radius: 12px;
 		background-color: var(--ax-prime-c3);
+	}
+}
+
+.ax-cont3-content {
+	z-index: 1;
+	.ax-cont3-bg {
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 75%;
+		bottom: 110px;
+		overflow: hidden;
+		border-radius: 24px;
 	}
 }

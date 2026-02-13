@@ -16,6 +16,9 @@
 
 .ax-ab3-content {
 	gap: 24px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		justify-content: center;
+	}
 }
 
 .ax-ab3-img-wrap {
@@ -50,6 +53,9 @@
 .ax-ab3-card-wrap {
 	width: 100%;
 	max-width: 783px;
+	@media #{$xxl} {
+		max-width: 600px;
+	}
 }
 
 .ax-ab3-card1 {

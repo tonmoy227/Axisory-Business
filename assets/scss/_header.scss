@@ -494,11 +494,30 @@
 		}
 	}
 	&:is(.header_style_three) {
+		.ax-mobile-menu-btn {
+			span {
+				background-color: #fff;
+			}
+		}
+		.dropdown:after {
+			color: var(--ax-prime-c3);
+		}
+		.dropdown-menu a.active {
+			color: var(--ax-prime-c3) !important;
+		}
 		.header-content {
+			@media #{$xs,$xxs} {
+				align-items: center;
+				border-bottom: 1px solid #FFFFFF4D;
+			}
 			.brand-logo {
 				width: 100%;
+				padding: 15px;
 				max-width: 229px;
 				background-color: #fff;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					max-width: 180px;
+				}
 			}
 			.cta-menu-wrap {
 				width: 100%;
@@ -506,10 +525,15 @@
 			.header-cta {
 				padding: 8px 55px;
 				background-color: #fff;
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					padding-right: 15px;
+				}
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none !important;
+				}
 				.item-cta {
 					a {
 						color: #041427;
-						font-weight: 500;
 						margin-right: 20px;
 						&:last-child {
 							margin-right: 0;
@@ -537,10 +561,26 @@
 				padding-bottom: 16px;
 				padding-right: 52px;
 				border-bottom: 1px solid #FFFFFF4D;
+				@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+				@media #{$xs,$xxs} {
+					border: none;
+				}
 			}
 			.main-navigation {
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
 				li {
 					margin: 0px 27px;
+					@media #{$xl} {
+						margin: 0px 16px;
+					}
+					@media #{$lg,$md,$sm,$xs,$xxs} {
+						margin: 0px 12px;
+					}
 					a {
 						color: #fff;
 						font-weight: 500;
@@ -554,6 +594,12 @@
 			.hd-search {
 				width: 240px;
 				position: relative;
+				@media #{$lg,$md,$sm,$xs,$xxs} {
+					width: 180px;
+				}
+				@media #{$xs,$xxs} {
+					display: none;
+				}
 				input {
 					width: 100%;
 					height: 44px;
@@ -581,10 +627,16 @@
 				}
 			}
 			.ax-btn2 {
+				@media #{$xs,$xxs} {
+					display: none;
+				}
 				a {
 					i {
 						width: 44px;
 						height: 44px;
+						@media #{$lg,$md,$sm,$xs,$xxs} {
+							display: none;
+						}
 					}
 					span {
 						border-radius: 14px;

@@ -199,6 +199,21 @@ Last change:    00/00/00
 					});
 				};
 
+				if ($('.ax-hero3-slider').length > 0 ) {
+					var slider = new Swiper('.ax-hero3-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						effect: "fade",
+						loop: true,
+						autoplay: {
+							delay: 6000,
+						},
+						speed: 1000,
+						navigation: {
+							nextEl: ".hr3-arrow",
+						},
+					});
+				};
 
 
 				afterPageLoad();
@@ -526,7 +541,47 @@ Last change:    00/00/00
 		});
 	};
 
-
+	if ($('.ax-blg3-slider').length > 0 ) {
+		var slider = new Swiper('.ax-blg3-slider', {
+			spaceBetween: 24,
+			slidesPerView: 3,
+			loop: true,
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 6000
+			// },
+			speed: 1000,
+			pagination: {
+				el: ".ax-blg3-pagi",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".ax-blg3-next",
+				prevEl: ".ax-blg3-prev",
+			},
+			breakpoints: {
+				'1200': {
+					slidesPerView: 3,
+				},
+				'840': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+			},
+		});
+	};
 
 	function afterPageLoad() {
 		CustomEase.create("ease1", "0, 0, 0.2, 1");
