@@ -31,6 +31,18 @@
 			letter-spacing: -.5px;
 		}
 	}
+	.item-img {
+		a {
+			-webkit-animation-name: spin;
+			animation-name: spin;
+			-webkit-animation-duration: 5000ms;
+			animation-duration: 5000ms;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+		}
+	}
 }
 
 .ax-trust-accordion {
@@ -175,6 +187,9 @@
 			text-align: center;
 			border-radius: 12px;
 			background-color: #FFFFFF1A;
+			&:hover {
+				letter-spacing: 2px;
+			}
 		}
 	}
 	.accordion-button::after {
