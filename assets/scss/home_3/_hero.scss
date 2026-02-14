@@ -297,12 +297,13 @@
 	display: flow-root;
 	&:before {
 		top: 0;
-		right: 0;
+		z-index: 2;
 		width: 20%;
+		right: -60px;
 		height: 100%;
 		content: '';
-		position: absolute;
-		background: linear-gradient(-90deg, #081B44 0%, #081B44 24.82%, #081B44 50.38%, rgba(8, 27, 68, 0) 75.46%, rgba(255, 255, 255, 0) 100%);
+		position: absolute;background: linear-gradient(270deg, #071942 0%, #071942 29.88%, #071942 60.01%, rgba(7, 25, 66, 0.9) 79.91%, rgba(7, 25, 66, 0) 100%);
+
 	}
 	.item-img {
 		cursor: pointer;
