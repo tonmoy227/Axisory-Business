@@ -143,9 +143,13 @@
 		border-radius: 12px;
 		padding-left: 12px;
 		border: 1px solid #83838324;
+		transition: all 500ms ease-in-out;
 		&::placeholder {
 			opacity: .5;
 			color: #313130;
+		}
+		&:focus {
+			border: 1px solid var(--ax-title-color2);
 		}
 	}
 	textarea {
@@ -160,7 +164,11 @@
 		border:  none;
 		font-weight: 500;
 		border-radius: 12px;
+		transition: all 500ms ease-in-out;
 		background-color: var(--ax-prime-c3);
+		&:hover {
+			letter-spacing: 2px;
+		}
 	}
 }
 

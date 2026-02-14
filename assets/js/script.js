@@ -686,6 +686,31 @@ Last change:    00/00/00
 		});
 	});
 
+	const items = document.querySelectorAll(".ax-whyc3-item");
+
+	items.forEach(item => {
+		const heading = item.querySelector(".item-numb h3");
+		if (!heading) return;
+
+		const split = new SplitText(heading, { type: "chars" });
+
+		gsap.set(split.chars, { y: 0, opacity: 1 });
+
+		item.addEventListener("mouseenter", () => {
+			gsap.fromTo(
+				split.chars,
+				{ y: 20, rotateX: 5, opacity: 0 },
+				{
+					y: 0,
+					rotateX: 0,
+					opacity: 1,
+					duration: .5,
+					stagger: .2,
+					ease: "power3.out"
+				}
+				);
+		});
+	});
 
 	if ($('.scene').length > 0 ) {
 		$('.scene').parallax({
@@ -1074,6 +1099,39 @@ Last change:    00/00/00
 		stagger: -.2,
 	})
 
+	var AXC3 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-ab3-card1",
+			start: "top 90%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC3
+	.from(".ax-ab3-card1 .item-client li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
+
+	var AXC4 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-workp3-bottom",
+			start: "top 90%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC4
+	.from(".ax-workp3-bottom .client-text li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	}) 
 
 	if ($(".progress-bar").length) {
 		$(".progress-bar").appear(function () {
@@ -1200,5 +1258,32 @@ Last change:    00/00/00
 			markers: false,
 		});
 	});
+
+	document.querySelectorAll(".ax-increase-pro-wrap").forEach((item) => {
+		ScrollTrigger.create({
+			trigger: item,
+			start: "top 60%",  
+			toggleClass: { targets: item, className: "active" },
+			once: false,
+			markers: false,
+		});
+	});
+
+	var EdProg5 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-workp3-content",
+			start: "top 70%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	EdProg5
+	.from(".ax-workp3-item", {
+		xPercent: -100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
 
 })(jQuery);

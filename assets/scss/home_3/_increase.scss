@@ -130,6 +130,8 @@
 		border-radius: 20px;
 		padding: 16px 32px 28px;
 		background-color: var(--ax-prime-c3);
+		transform: translateX(100%);
+		transition: all 500ms ease-in-out;
 		@media #{$xs,$xxs} {
 			gap: 20px;
 			width: 100% !important;
@@ -157,8 +159,19 @@
 	&:nth-child(even) {
 		.item-inner {
 			background-color: #fff;
+			transition-delay: 150ms;
 			b,span {
 				color: var(--ax-title-color2);
+			}
+		}
+	}
+}
+
+.ax-increase-pro-wrap {
+	&:is(.active) {
+		.ax-ins-pro-bar {
+			.item-inner {
+				transform: translateX(0%);
 			}
 		}
 	}
