@@ -27,20 +27,32 @@
 			color: #fff;
 		}
 		p {
+			font-size: 17px;
 			color: #E5E5E5;
-			letter-spacing: -.5px;
+			letter-spacing: -.2px;
 		}
 	}
 	.item-img {
 		a {
-			-webkit-animation-name: spin;
-			animation-name: spin;
-			-webkit-animation-duration: 5000ms;
-			animation-duration: 5000ms;
-			-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-			-webkit-animation-timing-function: linear;
-			animation-timing-function: linear;
+			position: relative;
+			.inner-icon {
+				top: 50%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				position: absolute;
+				transform: translateY(-50%);
+			}
+			.inner-img {
+				-webkit-animation-name: spin;
+				animation-name: spin;
+				-webkit-animation-duration: 7000ms;
+				animation-duration: 7000ms;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+			}
 		}
 	}
 }
@@ -160,7 +172,7 @@
 				border-radius: 12px;
 				align-items: center;
 				justify-content: center;
-				background-color: #EDF2F8B2;
+				background-color: #fff;
 
 			}
 			.item-text {

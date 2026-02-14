@@ -44,7 +44,7 @@
 		height: 100%;
 		z-index: -1;
 		img {
-			transition: all 7000ms ease-in-out;
+			transition: all 10000ms ease-in-out;
 		}
 		&:before {
 			top: 0;
@@ -198,7 +198,7 @@
 
 .ax-hr3-text {
 	z-index: 2;
-	max-width: 650px;
+	max-width: 700px;
 	position: relative;
 	.slide-numb {
 		opacity: 0;
@@ -228,7 +228,7 @@
 		line-height: 1.14;
 		font-weight: 800;
 		margin-bottom: 12px;
-		letter-spacing: -2px;
+		letter-spacing: -1px;
 		.split-line {
 			overflow: hidden;
 			transform: translateY(100%) scaleY(-0.6);

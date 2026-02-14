@@ -129,6 +129,26 @@ Last change:    00/00/00
 	});
 
 
+	$('.marquee-left3').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: false,
+		startVisible:true,
+	});
+	$('.marquee-right3').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: false,
+		startVisible:true,
+	});
+
+
 	gsap.registerPlugin(ScrollTrigger);
 	PIXI.utils.skipHello();
 	// Animation
@@ -797,6 +817,10 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 0, scale: .5, yPercent: 100})
 	});
+
+
+
+
 
 	gsap.utils.toArray(' .top_view2').forEach((el, index) => { 
 		let tlcta = gsap.timeline({

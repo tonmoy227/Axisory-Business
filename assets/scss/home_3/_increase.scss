@@ -51,14 +51,18 @@
 			font-size: 80px;
 			line-height: .9;
 			font-weight: 600;
-			letter-spacing: -3px;
+			margin-top: -3px;
 			padding-bottom: 10px;
+			b {
+				bottom: -3px;
+				position: relative;
+			}
 		}
-		span {
+		p {
 			color: #E5E5E5;
-			font-size: 18px;
+			font-size: 17px;
 			font-weight: 500;
-			letter-spacing: -1px;
+			letter-spacing: -.5px;
 		}
 	}
 	.item-text {
@@ -67,13 +71,14 @@
 			line-height: .9;
 			font-size: 100px;
 			font-weight: 600;
-			letter-spacing: -4px;
+			letter-spacing: -2px;
 			padding-bottom: 10px;
 		}
 		p {
 			opacity: .8;
 			color: #fff;
-			letter-spacing: -1px;
+			font-size: 17px;
+			letter-spacing: -.5px;
 		}
 		.ax-btn2 {
 			&:is(.ver_5) {
@@ -131,7 +136,7 @@
 		padding: 16px 32px 28px;
 		background-color: var(--ax-prime-c3);
 		transform: translateX(100%);
-		transition: all 500ms ease-in-out;
+		transition: 1500ms cubic-bezier(0.5, -0.5, 0.3, 1.5);
 		@media #{$xs,$xxs} {
 			gap: 20px;
 			width: 100% !important;
