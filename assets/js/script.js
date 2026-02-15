@@ -1310,4 +1310,50 @@ Last change:    00/00/00
 		stagger: -.2,
 	})
 
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const wrapper = document.querySelector(".ax-ab4-icon-wrapper ul");
+		const items = wrapper.querySelectorAll("li");
+		const radius = 200;
+		const centerX = wrapper.clientWidth / 2;
+		const centerY = wrapper.clientHeight / 2;
+		const total = items.length;
+		const angleStep = (2 * Math.PI) / total;
+
+		items.forEach((item, index) => {
+			const angle = index * angleStep;
+
+			const x =
+			centerX + radius * Math.cos(angle) - item.offsetWidth / 2;
+			const y =
+			centerY + radius * Math.sin(angle) - item.offsetHeight / 2;
+
+			item.style.left = `${x}px`;
+			item.style.top = `${y}px`;
+		});
+	});
+
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var ATWORKPROCESS = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.ax-workp4-area',
+				start: "top 20%",
+				end: "top -100%",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
+			}
+
+		});
+		ATWORKPROCESS
+		.from( ".ax-workp4-item._1" , {  scale: 0.5, rotateY: -130,  yPercent: 150,   duration: 1, ease: "power2.out"})
+		.from( ".ax-workp4-item._2" , {  scale: 0.5, rotateY: -130,  yPercent: 150,   duration: 1, ease: "power2.out"})
+		.from( ".ax-workp4-item._3" , {  scale: 0.5, yPercent: 150, rotateY: -130,   duration: 1, ease: "power2.out"})
+	};
+
+
+
 })(jQuery);
