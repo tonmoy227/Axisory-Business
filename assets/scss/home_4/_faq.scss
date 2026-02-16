@@ -1,0 +1,195 @@
+.ax-faq4-content {
+	gap: 24px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.ax-faq4-text {
+	width: 100%;
+	display: flex;
+	max-width: 553px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	.ax-sec-title2 {
+		p {
+			max-width: 500px;
+		}
+	}
+}
+
+.ax-faq4-card {
+	max-width: 437px;
+	.card-author {
+		gap: 24px;
+		padding: 8px;
+		border-radius: 20px;
+		background-color: var(--ax-prime-c4);
+		.item-img {
+			width: 148px;
+			height: 148px;
+			overflow: hidden;
+			border-radius: 16px;
+		}
+		.item-text {
+			h3 {
+				color: #fff;
+				font-size: 20px;
+				font-weight: 600;
+				padding-bottom: 4px;
+			}
+			span {
+				color: #E5E5E5;
+			}
+			a {
+				gap: 10px;
+				display: flex;
+				align-items: center;
+				border-radius: 10px;
+				border: 1px solid #FFFFFF;
+				padding: 6px 16px 6px 6px;
+				i {
+					width: 36px;
+					height: 36px;
+					display: flex;
+					border-radius: 8px;
+					align-items: center;
+					justify-content: center;
+					background-color: #fff;
+				}
+				span {
+					font-size: 15px;
+					font-weight: 500;
+					font-family: var(--ax-inter);
+				}
+			}
+		}
+	}
+
+	.card-bottom {
+		margin-top: 12px;
+		padding: 12px 16px;
+		border-radius: 16px;
+		border: 1px dashed #31313033;
+		.bottom-icon {
+			gap: 10px;
+			margin-bottom: 8px;
+			span {
+				color: #000014;
+				font-size: 18px;
+				font-weight: 500;
+				font-family: var(--ax-dm);
+			}
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+}
+
+.ax-faq4-feed {
+	width: 100%;
+	padding: 12px;
+	max-width: 783px;
+	border-radius: 12px;
+	background-color: #F4F4F5;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+}
+.ax-faq4-accordion {
+	.accordion-item,
+	.accordion-button {
+		background-color: #fff;
+		background-color: transparent;
+		transition: all 200ms ease-in-out;
+	}
+	.accordion-item {
+		border: none;
+		padding: 16px;
+		position: relative;
+		margin-bottom: 8px;
+		border-radius: 24px;
+		background-color: #fff;
+		transition: all 200ms ease-in-out;
+		border-bottom: 1px solid rgba(13, 27, 42, .12);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:is(.active) {
+			background-color: var(--ax-prime-c4);
+			.accordion-button {
+				span {
+					color: #fff;
+				}
+				i {
+					background-color: #F4F4F5;
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		margin: 0 auto;
+		font-size: 20px;
+		font-weight: 400;
+		position: relative;
+		font-family: var(--ax-sora);
+		span {
+			gap: 12px;
+			display: flex;
+			color: #000014;
+			align-items: center;
+			@media #{$xs,$xxs} {
+				flex-wrap: wrap;
+			}
+		}
+		i {
+			width: 48px;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			border-radius: 16px;
+			justify-content: center;
+			background-color: #F4F4F5;
+			transition: all 400ms ease-in-out;
+		}
+	}
+
+	.accordion-button:focus {
+		box-shadow: none;
+	}
+	.accordion-body {
+		padding: 0;
+		font-size: 18px;
+		transition: all 500ms ease-in-out;
+		.bi-faq-text {
+			color: #fff;
+			max-width: 730px;
+			font-weight: 500;
+			padding-top: 10px;
+			padding-left: 56px;
+			padding-bottom: 10px;
+			@media #{$xs,$xxs} {
+				padding-left: 0;
+			}
+		}
+	}
+	.accordion-button::after {
+		display: none;
+	}
+	.accordion-button:not(.collapsed) { 
+		color: #000000;
+		box-shadow: none;
+		span {
+			color: #000000;
+		}
+		i {
+			opacity: 1;
+		}
+	}
+}

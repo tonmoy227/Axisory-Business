@@ -1187,9 +1187,9 @@ Last change:    00/00/00
 
 
 
-	const accordionItems = document.querySelectorAll('.ax-trust-accordion .accordion-item');
+	const accordionItems = document.querySelectorAll('.ax-trust-accordion .accordion-item, .ax-faq4-accordion .accordion-item ');
 	accordionItems.forEach(item => {
-		const btn = item.querySelector('.ax-trust-accordion .accordion-button');
+		const btn = item.querySelector('.ax-trust-accordion .accordion-button, .ax-faq4-accordion .accordion-button ');
 		btn.addEventListener('click', () => {
 			accordionItems.forEach(i => i.classList.remove('active'));
 			setTimeout(() => {
@@ -1339,7 +1339,7 @@ Last change:    00/00/00
 		var ATWORKPROCESS = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.ax-workp4-area',
-				start: "top 20%",
+				start: "top 22%",
 				end: "top -100%",
 				scrub: 1,
 				pin: true,
@@ -1354,6 +1354,29 @@ Last change:    00/00/00
 		.from( ".ax-workp4-item._3" , {  scale: 0.5, yPercent: 150, rotateY: -130,   duration: 1, ease: "power2.out"})
 	};
 
+
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		const ServiceCardItem = gsap.utils.toArray(".ax-pro4-item-wrap");
+		const animateCard = (card, wrapper, index) => {
+			gsap.to(card, {
+				transformOrigin: "top center",
+				duration: 2,
+				scrub: 1.5,
+				opacity: 0,
+				ease: "power1.out",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: `top ${130 + 20 * index}`, 
+					end: "bottom 70%",
+					endTrigger: ".ax-pro4-content",
+					pin: wrapper,
+					pinSpacing: false,
+					markers: false,
+				},
+			});
+		};
+		ServiceCardItem.forEach((wrapper, index) => animateCard([index], wrapper, index));
+	}
 
 
 })(jQuery);

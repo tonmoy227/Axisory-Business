@@ -12,6 +12,17 @@
 .ax-workp4-wrapper {
 	margin: 0 auto;
 	max-width: 524px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: flex;
+		gap: 30px 15px;
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 60px;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 }
 
 
@@ -40,16 +51,25 @@
 		backdrop-filter: blur(50px);
 		box-shadow: 0px 4px 24px -1px #00000033;
 		background: linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%);
+		@media #{$xxs} {
+			padding: 20px;
+		}
 		h3 {
 			color: #fff;
 			font-size: 24px;
 			font-weight: 600;
 			padding-bottom: 10px;
+			@media #{$xxs} {
+				font-size: 20px;
+			}
 		}
 		p {
 			color: #fff;
 			font-size: 18px;
 			font-weight: 500;
+			@media #{$xxs} {
+				font-size: 16px;
+			}
 		}
 	}
 	&:is(._1),
@@ -58,16 +78,26 @@
 		left: 0;
 		right: 0;
 		position: absolute;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			position: relative;
+			transform: rotate(0);
+		}
 	}
 	&:is(._1) {
 		transform: rotate(12deg);
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			transform: rotate(0);
+		}
 	}
 	&:is(._2) {
 		transform: rotate(-12deg);
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			transform: rotate(0);
+		}
 	}
 }
 .ax-workp4-marquee {
-	top: 50%;
+	top: 42%;
 	left: -5%;
 	width: 110%;
 	z-index: -1;
@@ -76,9 +106,16 @@
 	padding: 34px 0 30px;
 	background-color: #00181B;
 	transform: rotate(5deg);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		position: static;
+		transform: rotate(0deg);
+	}
 	&:nth-child(2) {
 		transform: rotate(-5deg);
 		background-color: var(--ax-prime-c4);
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			transform: rotate(0deg);
+		}
 	}
 	h3 {
 		color: #fff;
