@@ -866,3 +866,33 @@
 		padding: 20px 0px;
 	}	
 }
+
+.ax-ftr4-sec {
+	margin: 20px;
+	.ax-ftr4-wrap {
+		border-radius: 48px;
+	}
+}
+.ax-cta4-text-desc {
+	p {
+		text-align: right;
+	}
+}
+
+.ax-ftr4-sec {
+	margin: 0px 20px;
+}
+.ax-ftr4-wrap {
+	border-radius: 48px;
+}
+
+.ax-ftr4-widget1 {
+	max-width: 586px;
+	border-radius: 48px;
+	padding: 60px 60px 0px;
+	background-color: var(--ax-prime-c4);
+	p {
+		color: #fff;
+		max-width: 420px;
+	}
+}

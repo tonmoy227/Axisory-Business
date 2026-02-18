@@ -1,0 +1,136 @@
+.ax-blog4-sec {
+	.ax-sec-title2 {
+		p {
+			margin: 0 auto;
+			max-width: 595px;
+		}
+	}
+}
+
+.ax-blog4-item {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1218px;
+	margin-bottom: 20px;
+	.item-inner-text {
+		z-index: 2;
+		width: 100%;
+		padding: 8px;
+		max-width: 1130px;
+		position: relative;
+		border-radius: 20px;
+		background-color: #F4F4F5;
+		transition: all 500ms ease-in-out;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+			padding-bottom: 20px;
+		}
+		.item-date {
+			width: 104px;
+			height: 104px;
+			text-align: center;
+			border-radius: 14px;
+			background-color: #fff;
+			b {
+				height: 72px;
+				display: flex;
+				line-height: 1;
+				font-size: 18px;
+				font-weight: 400;
+				align-items: center;
+				justify-content: center;
+				font-family: var(--ax-sora);
+				color: var(--ax-title-color2);
+			}
+			span {
+				width: 100%;
+				font-size: 15px;
+				font-weight: 500;
+				padding: 6px 12px;
+				border-radius: 12px;
+				background: linear-gradient(180deg, #EDF2F8 0%, rgba(237, 242, 248, 0) 100%);
+			}
+		}
+		.item-meta {
+			width: 100%;
+			font-size: 22px;
+			margin-top: 20px;
+			max-width: 205px;
+			margin-left: 40px;
+			letter-spacing: -.5px;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				margin-left: 20px;
+			}
+			@media #{$xs,$xxs} {
+				max-width: 100%;
+				margin-left: 0;
+			}
+		}
+		.item-title {
+			max-width: 730px;
+			margin-top: 20px;
+			margin-left: 25px;
+			.blg_title {
+				font-size: 22px;
+				line-height: 1.5;
+				position: relative;
+				padding-left: 25px;
+				letter-spacing: -.5px;
+				&:before {
+					left: 0;
+					top: 14px;
+					width: 8px;
+					height: 8px;
+					content: '';
+					position: absolute;
+					background-color: var(--ax-title-color2);
+				}
+			}
+		}
+	}
+	.item-more {
+		width: 140px;
+		display: flex;
+		margin-left: -160px;
+		align-items: center;
+		border-radius: 20px;
+		justify-content: center;
+		transition: all 500ms ease-in-out;
+		background-color: var(--ax-prime-c4);
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+		svg {
+			margin-left: 30px;
+		}
+	}
+	&:hover {
+		.item-inner-text {
+			background-color: #E0F0F2;
+		}
+		.item-meta {
+			color: #000014;
+		}
+		.item-more {
+			margin-left: -40px;
+		}
+	}
+}
+
+.ax-blog4-more {
+	gap: 5px 15px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	a {
+		display: flex;
+		font-weight: 500;
+		
+		align-items: center;
+		justify-content: center;
+		color: var(--ax-prime-c4);
+		span {
+			text-decoration: underline;
+		}
+	}
+}

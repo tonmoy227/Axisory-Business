@@ -177,9 +177,19 @@
 			justify-content: center;
 			color: var(--ax-prime-c2);
 			transform: translateY(-50%) translateX(-50%) ;
+			svg {
+				path {
+					transition: all 500ms ease-in-out;
+				}
+			}
 			&:hover {
 				color: #fff;
 				background-color: var(--ax-prime-c2);
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
 			}
 		}
 	}
