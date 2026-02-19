@@ -59,4 +59,9 @@
 			padding-bottom: 8px;
 		}
 	}
+	&:hover {
+		.item-icon {
+			animation: hithere 1s ease infinite;
+		}
+	}
 }

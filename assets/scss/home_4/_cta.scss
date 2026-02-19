@@ -61,6 +61,7 @@
 				padding: 12px 20px;
 				background-color: #fff;
 				color: var(--ax-title-color2);
+				transition: all 400ms ease-in-out;
 			}
 			i {
 				z-index: 1;
@@ -88,6 +89,11 @@
 				&:after {
 					left: 0px;
 					background-color: var(--ax-prime-c4);
+				}
+			}
+			&:hover {
+				span {
+					letter-spacing: 1px;
 				}
 			}
 		}

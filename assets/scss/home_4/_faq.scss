@@ -45,11 +45,25 @@
 			}
 			a {
 				gap: 10px;
+				z-index: 1;
 				display: flex;
 				align-items: center;
 				border-radius: 10px;
+				position: relative;
 				border: 1px solid #FFFFFF;
 				padding: 6px 16px 6px 6px;
+				&:before {
+					top: 6px;
+					left: 8px;
+					width: 0%;
+					z-index: -1;
+					height: 36px;
+					content: '';
+					border-radius: 8px;
+					position: absolute;
+					background-color: #fff;
+					transition: all 500ms ease-in-out;
+				}
 				i {
 					width: 36px;
 					height: 36px;
@@ -63,6 +77,15 @@
 					font-size: 15px;
 					font-weight: 500;
 					font-family: var(--ax-inter);
+					transition: all 500ms ease-in-out;
+				}
+				&:hover {
+					span {
+						color: var(--ax-title-color2);
+					}
+					&:before {
+						width: 92%;
+					}
 				}
 			}
 		}

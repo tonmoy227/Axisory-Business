@@ -173,6 +173,16 @@ Last change:    00/00/00
 		fixedContentPos: false,
 	});
 
+	if($('.ax-split-2').length) {
+		var txtSplit = $('.ax-split-2');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "words",
+				wordsClass: "split-word"
+			});
+		});
+	}
+
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -232,6 +242,19 @@ Last change:    00/00/00
 						navigation: {
 							nextEl: ".hr3-arrow",
 						},
+					});
+				};
+
+				if ($('.ax-hero4-slider').length > 0 ) {
+					var slider = new Swiper('.ax-hero4-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						effect: "fade",
+						loop: true,
+						autoplay: {
+							delay: 6000,
+						},
+						speed: 1000,
 					});
 				};
 
@@ -1156,6 +1179,11 @@ Last change:    00/00/00
 		duration: 1, 
 		stagger: -.2,
 	}) 
+
+
+
+
+
 
 	if ($(".progress-bar").length) {
 		$(".progress-bar").appear(function () {
