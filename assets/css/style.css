@@ -14375,6 +14375,9 @@ a:hover, a:focus {
   border-radius: 12px;
   background-color: var(--ax-prime-c4);
 }
+.ax-price4-item .item-btn a:hover {
+  letter-spacing: 1px;
+}
 .ax-price4-item li {
   color: #fff;
   margin-bottom: 10px;
@@ -14437,6 +14440,7 @@ a:hover, a:focus {
   height: 60%;
   content: "";
   position: absolute;
+  border-radius: 32px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
