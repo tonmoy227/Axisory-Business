@@ -1407,7 +1407,7 @@ Last change:    00/00/00
 								const currentRect = wrapper.getBoundingClientRect();
 								const distance = nextRect.top - currentRect.top;
 								const cardHeight = currentRect.height;
-								let progress = gsap.utils.normalize(cardHeight, cardHeight * 0.5, distance);
+								let progress = gsap.utils.normalize(cardHeight, cardHeight * 0.4, distance);
 								progress = gsap.utils.clamp(0, 1, progress);
 								gsap.set(cardItem, { opacity: 1 - progress });
 							}

@@ -14728,7 +14728,7 @@ a:hover, a:focus {
   font-size: 16px;
   font-weight: 500;
   border-radius: 100px;
-  padding: 12px 28px 12px 16px;
+  padding: 12px 28px 12px 22px;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background-color: var(--ax-prime-c4);
