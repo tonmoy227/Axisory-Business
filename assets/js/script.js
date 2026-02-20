@@ -1384,27 +1384,70 @@ Last change:    00/00/00
 
 
 	if (window.matchMedia("(min-width: 1200px)").matches) {
-		const ServiceCardItem = gsap.utils.toArray(".ax-pro4-item-wrap");
-		const animateCard = (card, wrapper, index) => {
-			gsap.to(card, {
-				transformOrigin: "top center",
-				duration: 2,
-				scrub: 1.5,
-				opacity: 0,
-				ease: "power1.out",
-				scrollTrigger: {
+		const ServiceCardWrappers = gsap.utils.toArray(".ax-pro4-item-wrap");
+
+		ServiceCardWrappers.forEach((wrapper, index) => {
+			const cardItem = wrapper.querySelector(".ax-pro4-item");
+			const nextWrapper = ServiceCardWrappers[index + 1];
+			if (index < ServiceCardWrappers.length - 1) {
+				gsap.to(cardItem, {
+					opacity: 0,
+					ease: "none",
+					scrollTrigger: {
+						trigger: wrapper,
+						start: `top ${120 + 0 * index}`, 
+						endTrigger: ".ax-pro4-content",
+						end: "bottom 69%",
+						pin: true,
+						pinSpacing: false,
+						scrub: true,
+						onUpdate: (self) => {
+							if (nextWrapper) {
+								const nextRect = nextWrapper.getBoundingClientRect();
+								const currentRect = wrapper.getBoundingClientRect();
+								const distance = nextRect.top - currentRect.top;
+								const cardHeight = currentRect.height;
+								let progress = gsap.utils.normalize(cardHeight, cardHeight * 0.5, distance);
+								progress = gsap.utils.clamp(0, 1, progress);
+								gsap.set(cardItem, { opacity: 1 - progress });
+							}
+						}
+					},
+				});
+			} else {
+				ScrollTrigger.create({
 					trigger: wrapper,
-					start: `top ${130 + 20 * index}`, 
-					end: "bottom 70%",
+					start: `top ${120 + 0 * index}`,
 					endTrigger: ".ax-pro4-content",
-					pin: wrapper,
-					pinSpacing: false,
-					markers: false,
-				},
-			});
-		};
-		ServiceCardItem.forEach((wrapper, index) => animateCard([index], wrapper, index));
+					end: "bottom 70%",
+					pin: true,
+					pinSpacing: false
+				});
+			}
+		});
+
+		var ATWORKPROCESS = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.mx-wc2-scrolbar',
+				start: "top 14%",
+				end: "bottom 100%",
+				endTrigger: ".ax-pro4-wrap",
+				scrub: 1,
+				pin: true,
+				pinSpacing: false,
+				markers: false,
+			}
+		});
+
+		ATWORKPROCESS.fromTo(".wc2-scrbar",
+			{ height: "60px" },
+			{ height: "100%", ease: "none" },
+			0 
+			);
 	}
+
+
+
 
 
 })(jQuery);

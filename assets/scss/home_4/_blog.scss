@@ -43,12 +43,26 @@
 				color: var(--ax-title-color2);
 			}
 			span {
+				z-index: 1;
 				width: 100%;
 				font-size: 15px;
 				font-weight: 500;
 				padding: 6px 12px;
+				position: relative;
 				border-radius: 12px;
 				background: linear-gradient(180deg, #EDF2F8 0%, rgba(237, 242, 248, 0) 100%);
+				&:before {
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					content: '';
+					z-index: -1;
+					height: 0%;
+					border-radius: 12px;
+					position: absolute;
+					transition: all 300ms ease-in-out;
+					background-color: var(--ax-prime-c4);
+				}
 			}
 		}
 		.item-meta {
@@ -107,6 +121,14 @@
 	&:hover {
 		.item-inner-text {
 			background-color: #E0F0F2;
+			.item-date {
+				span {
+					color: #fff;
+					&:before {
+						height: 100%;
+					}
+				}
+			}
 		}
 		.item-meta {
 			color: #000014;

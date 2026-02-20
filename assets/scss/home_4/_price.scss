@@ -56,7 +56,7 @@
 			width: 55px;
 			height: 55px;
 			overflow: hidden;
-			margin-left: -15px;
+			margin-left: -20px;
 			border-radius: 100%;
 			border: 3px solid #1F7585;
 			&:first-child {
@@ -94,7 +94,7 @@
 		&:is(.active) {
 			.ax-pri4-btn-item {
 				backdrop-filter: blur(25px);
-				background: linear-gradient(153.32deg, rgba(255, 255, 255, 0.8) -65.62%, rgba(255, 255, 255, 0.1) 83.28%);
+				background: linear-gradient(153.32deg, rgba(255, 255, 255, 0.5) -65.62%, rgba(255, 255, 255, 0.1) 83.28%);
 				i {
 					background-color: #fff;
 					svg {
