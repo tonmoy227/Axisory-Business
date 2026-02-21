@@ -627,6 +627,30 @@ a {
 	}
 }
 
+.ax-btn5 {
+	display: inline-block;
+	a {
+		gap: 8px;
+		border-radius: 12px;
+		padding: 2px 16px 2px 2px;
+		border: 1px solid #FFFFFF;
+		i {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			border-radius: 12px;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+		}
+		span {
+			color: #fff;
+			font-size: 16px;
+			font-family: var(--ax-sora);
+		}
+	}
+}
+
 // txa-common-css-start
 
 @for $i from 1 through 40 {

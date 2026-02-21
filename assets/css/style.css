@@ -1672,6 +1672,36 @@ a:hover, a:focus {
   background-color: var(--ax-prime-c2);
 }
 
+.ax-btn5 {
+  display: inline-block;
+}
+.ax-btn5 a {
+  gap: 8px;
+  border-radius: 12px;
+  padding: 2px 16px 2px 2px;
+  border: 1px solid #FFFFFF;
+}
+.ax-btn5 a i {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+}
+.ax-btn5 a span {
+  color: #fff;
+  font-size: 16px;
+  font-family: var(--ax-sora);
+}
+
 .mt-5 {
   margin-top: 5px;
 }
@@ -15166,6 +15196,76 @@ a:hover, a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/*---------------------------------------------------- */
+/******* HOME PAGE 5 *******/
+/*Hero area*/
+/*----------------------------------------------------*/
+.ax-hero5-wrap {
+  z-index: 1;
+  height: 100vh;
+}
+.ax-hero5-wrap .ax-hero5-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.ax-hero5-wrap .bg-shape {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 9, 39, 0.8509803922);
+}
+
+.ax-hero5-content {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1750px;
+  padding-top: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 220px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ax-hero5-top {
+  width: 100%;
+}
+.ax-hero5-top .item-text {
+  color: #fff;
+  line-height: 1;
+  max-width: 590px;
+  font-size: 66px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-family: var(--ax-sora);
+}
+.ax-hero5-top .item-video {
+  width: 305px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 32px;
+  border: 4px solid #FFFFFF;
+}
+
+.ax-hero5-bottom .item-desc {
+  max-width: 408px;
+}
+.ax-hero5-bottom .item-desc p {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 30px;
+  letter-spacing: -0.5px;
 }
 
 /*---------------------------------------------------- */
