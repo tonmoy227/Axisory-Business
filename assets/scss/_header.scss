@@ -798,5 +798,75 @@
 			}
 		}
 	}
+	&:is(.header_style_five) {
+		left: 0;
+		right: 0;
+		top: auto;
+		z-index: 10;
+		bottom: 28px;
+		margin: 0 auto;
+		max-width: 900px;
+		position: absolute;
+		@media #{$md,$sm,$xs,$xxs} {
+			top: 20px;
+			bottom: auto;
+		}
+		.ax-header5-content {
+			padding: 12px;
+			border-radius: 24px;
+			backdrop-filter: blur(50px);
+			background: linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%);
+			@media #{$md,$sm,$xs,$xxs} {
+				padding-right: 30px;
+				justify-content: space-between !important;
+			}
+			.brand-logo {
+				width: 68px;
+				height: 68px;
+				border-radius: 16px;
+				background-color: #fff;
+				@media #{$md,$sm,$xs,$xxs} {
+					width: 50px;
+					height: 50px;
+					padding: 10px;
+				}
+			}
+			.main-navigation {
+				font-family: var(--ax-sora);
+				@media #{$md,$sm,$xs,$xxs} {
+					display: none;
+				}
+				li {
+					margin: 0 20px;
+					a {
+						color: #fff;
+						font-size: 20px;
+						font-weight: 600;
+					}
+				}
+			}
+			.dropdown {
+				position: relative;
+				&:after {
+					top: 4px;
+					color: #fff;
+					font-size: 15px;
+					content: '\f103';
+				}
+			}
+			.btn-grp {
+				gap: 20px;
+				.ax-mobile-menu-btn {
+					span {
+						background-color: #fff;
+					}
+				}
+			}
+		} 
+	}
 }
+
+
+
+
 

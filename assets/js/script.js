@@ -1446,8 +1446,44 @@ Last change:    00/00/00
 			);
 	}
 
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var Testi_pin = document.querySelectorAll(".ax-solution5-text")
+		Testi_pin.forEach((item) => {
+			gsap.to(item, {
+				scrollTrigger: {
+					trigger: item,
+					markers: false,
+					pin: true,
+					pinSpacing: false,
+					start: "top 20%",
+					end: "bottom 70%",
+				},
+			});
+		});
+	}
 
 
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		const ServiceCardItem = gsap.utils.toArray(".ax-sol5-item");
+		const animateCard = (card, wrapper, index) => {
+			gsap.to(card, {
+				transformOrigin: "top center",
+				duration: 2,
+				scrub: 1.5,
+				ease: "power1.out",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: `top ${120 + 40 * index}`, 
+					end: "bottom 85%",
+					endTrigger: ".ax-solution5-sec",
+					pin: wrapper,
+					pinSpacing: false,
+					markers: false,
+				},
+			});
+		};
+		ServiceCardItem.forEach((wrapper, index) => animateCard([index], wrapper, index));
+	} 
 
 
 })(jQuery);
