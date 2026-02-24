@@ -336,7 +336,7 @@ Last change:    00/00/00
 
 		});
 	}
-	if ($('.ax-price2-sec, .ax-price1-sec').length > 0 ) {
+	if ($('.ax-price2-sec, .ax-price1-sec, .ax-price5-sec').length > 0 ) {
 		document.addEventListener("DOMContentLoaded", () => {
 			const e = document.getElementById("filt-monthly"),
 			d = document.getElementById("filt-hourly"),
@@ -1484,6 +1484,69 @@ Last change:    00/00/00
 		};
 		ServiceCardItem.forEach((wrapper, index) => animateCard([index], wrapper, index));
 	} 
+
+
+	if ($('.ax-part5-slider').length > 0 ) {
+		var slider = new Swiper('.ax-part5-slider', {
+			spaceBetween: 50,
+			slidesPerView: 7,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 1000
+			},
+			speed: 1000,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 7,
+				},
+				'1200': {
+					slidesPerView: 5,
+				},
+				'992': {
+					slidesPerView: 4,
+				},
+				'768': {
+					slidesPerView: 3,
+				},
+				'576': {
+					slidesPerView: 2,
+				},
+				'480': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	}; 
+
+	document.querySelectorAll('.ax-cs5-slider-wrap').forEach((sliderEl) => {
+
+		const section = sliderEl.closest('.ax-cs5-tab-desc');
+
+		const swiper = new Swiper(sliderEl, {
+			slidesPerView: 3,
+			centeredSlides: true,
+			loop: true,
+			speed: 1000,
+			spaceBetween: 0,
+
+			navigation: {
+				nextEl: section.querySelector('.ax-cs5-next'),
+				prevEl: section.querySelector('.ax-cs5-prev'),
+			},
+
+			breakpoints: {
+				1200: { slidesPerView: 3 },
+				840: { slidesPerView: 2, spaceBetween: 24 },
+				576: { slidesPerView: 1, spaceBetween: 24 },
+				0:   { slidesPerView: 1, spaceBetween: 24 },
+			}
+		});
+
+	});
 
 
 })(jQuery);
