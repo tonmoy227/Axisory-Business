@@ -1549,4 +1549,19 @@ Last change:    00/00/00
 	});
 
 
+	if ($('.ax-testi5-slider').length > 0 ) {
+		var slider = new Swiper('.ax-testi5-slider', {
+			spaceBetween: 50,
+			slidesPerView: 1,
+			effect: "fade",
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 1000
+			},
+			speed: 1000,
+		});
+	}; 
+
+
 })(jQuery);
