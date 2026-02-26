@@ -1215,9 +1215,9 @@ Last change:    00/00/00
 
 
 
-	const accordionItems = document.querySelectorAll('.ax-trust-accordion .accordion-item, .ax-faq4-accordion .accordion-item ');
+	const accordionItems = document.querySelectorAll('.ax-trust-accordion .accordion-item, .ax-faq4-accordion .accordion-item, .ax-faq5-wrapper .accordion-item');
 	accordionItems.forEach(item => {
-		const btn = item.querySelector('.ax-trust-accordion .accordion-button, .ax-faq4-accordion .accordion-button ');
+		const btn = item.querySelector('.ax-trust-accordion .accordion-button, .ax-faq4-accordion .accordion-button, .ax-faq5-wrapper .accordion-button');
 		btn.addEventListener('click', () => {
 			accordionItems.forEach(i => i.classList.remove('active'));
 			setTimeout(() => {
@@ -1555,6 +1555,10 @@ Last change:    00/00/00
 			slidesPerView: 1,
 			effect: "fade",
 			loop: true,
+			navigation: {
+				nextEl: ".ax-tst5-next",
+				prevEl: ".ax-tst5-prev",
+			},
 			autoplay: {
 				enabled: true,
 				delay: 1000

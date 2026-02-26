@@ -1,0 +1,29 @@
+.ax-blg5-sec {
+	margin: 0px 24px;
+}
+.ax-blg5-wrap {
+	margin-top: -120px;
+	padding-top: 240px;
+	border-radius: 60px;
+	background-color: #080927;
+	.ax-sec-title3 {
+		.subtitle {
+			i {
+				background-color: #fff;
+			}
+			.inner-item {
+				border: 1px solid #fff;
+				span {
+					color: #fff;
+				}
+			}
+		}
+		.sec_title, p {
+			color: #fff;
+		}
+		p {
+			margin: 0 auto;
+			max-width: 630px;
+		}
+	}
+}

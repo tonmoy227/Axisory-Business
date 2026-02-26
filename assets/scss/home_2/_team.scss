@@ -33,6 +33,15 @@
 			max-width: 640px;
 		}
 	}
+	&:is(.ver_2) {
+		.ax-sec-title2 {
+			.sec_title {
+				span {
+					color: var(--ax-prime-c5);
+				}
+			}
+		}
+	}
 }
 .ax-team2-featured {
 	gap: 12px;
@@ -92,6 +101,14 @@
 				border: 1px solid var(--ax-prime-c2);
 				background-color: var(--ax-prime-c2);
 				box-shadow: 0px 0px 6px 0px #FFFFFF inset;
+			}
+		}
+		&:is(.ver_2) {
+			a {
+				&:hover {
+					border: 1px solid var(--ax-prime-c5);
+					background-color: var(--ax-prime-c5);
+				}
 			}
 		}
 	}
@@ -164,6 +181,21 @@
 			}
 			&:hover {
 				text-decoration: underline;
+			}
+			&:is(.ver_2) {
+				font-size: 16px;
+				line-height: .9;
+				font-weight: 600;
+				font-family: var(--ax-sora);
+			}
+		}
+		.ax-btn5 {
+			a {
+				font-size: 16px;
+				font-weight: 600;
+				font-family: var(--ax-sora);
+				background-color: var(--ax-prime-c5);
+				border: 1px solid var(--ax-prime-c5);
 			}
 		}
 	}

@@ -42,6 +42,9 @@
 		@media #{$xxs} { 
 			padding: 23px 15px 23px 15px;
 		}
+		&:is(.active) {
+			border: 1px solid rgba(13, 27, 42, .12) !important;
+		}
 	}
 	.accordion-button {
 		padding: 0;
