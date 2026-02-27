@@ -1,15 +1,32 @@
 .ax-why-c5-sec {
 	.ax-sec-title3 {
-		gap: 140px;
+		gap: 30px 140px;
+		flex-wrap: wrap;
 		.ax-sec-desc {
 			max-width: 740px;
 			.sec_title {
-				line-height: .9;
+				line-height: 1.2;
 				font-size: 80px;
+				margin-top: -15px;
+				@media #{$md} {
+					font-size: 42px;
+				}
+				@media #{$sm} {
+					font-size: 40px;
+				}
+				@media #{$xs} {
+					font-size: 38px;
+				}
+				@media #{$xxs} {
+					font-size: 34px;
+				}
+				@media #{$xxxs} {
+					font-size: 30px;
+				}  
 			}
 			p {
 				max-width: 730px;
-				padding-top: 25px;
+				padding-top: 18px;
 				letter-spacing: -0.5px;
 			}
 		}
@@ -24,11 +41,21 @@
 
 .ax-why-c5-wrap {
 	gap: 24px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .ax-why-c5-wrap2 {
 	gap: 22px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media #{$lg,$md} {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns: 1fr;
+	}
 }
 .ax-why-c5-item1 {
 	padding: 12px;

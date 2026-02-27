@@ -1616,7 +1616,7 @@ Last change:    00/00/00
 			},
 			autoplay: {
 				enabled: true,
-				delay: 1000
+				delay: 4000
 			},
 			speed: 1000,
 		});

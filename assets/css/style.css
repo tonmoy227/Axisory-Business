@@ -16704,18 +16704,46 @@ a:hover, a:focus {
 /*why-choose area*/
 /*----------------------------------------------------*/
 .ax-why-c5-sec .ax-sec-title3 {
-  gap: 140px;
+  gap: 30px 140px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc {
   max-width: 740px;
 }
 .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
-  line-height: 0.9;
+  line-height: 1.2;
   font-size: 80px;
+  margin-top: -15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 575px) {
+  .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
+    font-size: 38px;
+  }
+}
+@media (max-width: 480px) {
+  .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 360px) {
+  .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc .sec_title {
+    font-size: 30px;
+  }
 }
 .ax-why-c5-sec .ax-sec-title3 .ax-sec-desc p {
   max-width: 730px;
-  padding-top: 25px;
+  padding-top: 18px;
   letter-spacing: -0.5px;
 }
 
@@ -16728,6 +16756,15 @@ a:hover, a:focus {
 .ax-why-c5-wrap {
   gap: 24px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .ax-why-c5-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .ax-why-c5-wrap2 {
   gap: 22px;
@@ -16735,6 +16772,18 @@ a:hover, a:focus {
   display: grid;
   -ms-grid-columns: 1fr 22px 1fr 22px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .ax-why-c5-wrap2 {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .ax-why-c5-wrap2 {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 .ax-why-c5-item1 {
@@ -17105,15 +17154,27 @@ a:hover, a:focus {
   max-width: 660px;
 }
 .ax-testi5-item h3 {
+  opacity: 0;
   color: #fff;
   font-size: 24px;
   font-weight: 600;
+  visibility: hidden;
   margin-bottom: 30px;
   letter-spacing: -0.5px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
 }
 .ax-testi5-item p {
+  opacity: 0;
   color: #fff;
   font-size: 20px;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
 }
 .ax-testi5-item p span {
   opacity: 0.6;
@@ -17122,7 +17183,13 @@ a:hover, a:focus {
   line-height: 1.7;
 }
 .ax-testi5-item .item-author {
+  opacity: 0;
+  visibility: hidden;
   margin-top: 60px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
 }
 .ax-testi5-item .item-author .item-img {
   width: 80px;
@@ -17252,6 +17319,31 @@ a:hover, a:focus {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+
+.swiper-slide-active .ax-testi5-item h3 {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+.swiper-slide-active .ax-testi5-item p {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+.swiper-slide-active .ax-testi5-item .item-author {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition-delay: 1100ms;
+          transition-delay: 1100ms;
 }
 
 /*---------------------------------------------------- */
