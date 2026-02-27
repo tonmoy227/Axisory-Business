@@ -3,6 +3,10 @@
 }
 
 .ax-price5-top {
+	gap: 30px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	.ax-sec-title3 {
 		max-width: 620px;
 	}
@@ -17,6 +21,16 @@
 
 .ax-price2-item-wrap1 {
 	&:is(.ver_2) {
+		@media #{$xxs} {
+			.ax-price2-grp {
+				top: 22%;
+			}
+		}
+		@media #{$xxxs} {
+			.ax-price2-grp {
+				top: 20%;
+			}
+		}
 		.ax-pri-shape1 {
 			display: none;
 		}
@@ -97,6 +111,9 @@
 	display: grid;
 	margin-top: 24px;
 	grid-template-columns: 1fr 1fr;
+	@media #{$sm,$xs,$xxs} {
+		grid-template-columns:  1fr;
+	}
 }
 
 .ax-price5-card1 {

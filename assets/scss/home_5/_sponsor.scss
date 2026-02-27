@@ -19,6 +19,9 @@
 		width: 200px;
 		position: absolute;
 		background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 20.27%, #FFFFFF 39.93%, rgba(255, 255, 255, 0.9) 59.9%, rgba(255, 255, 255, 0.95) 79.56%, rgba(255, 255, 255, 0) 100%);
+		@media #{$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 	&:after {
 		right: 0;

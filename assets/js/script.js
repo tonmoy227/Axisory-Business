@@ -259,6 +259,20 @@ Last change:    00/00/00
 				};
 
 
+				if ($('.ax-hero5-slider').length > 0 ) {
+					var slider = new Swiper('.ax-hero5-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						effect: "fade",
+						loop: true,
+						autoplay: {
+							delay: 6000,
+						},
+						speed: 1000,
+					});
+				};
+
+
 				afterPageLoad();
 			}, 700);
 
@@ -863,6 +877,27 @@ Last change:    00/00/00
 	});
 
 
+	gsap.utils.toArray(' .top_view2_2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 100%",
+				end: "top 90%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, opacity: 0,  y: "300"})
+	});
+
+
+
+
+
 	gsap.utils.toArray(' .top_view3').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -1181,7 +1216,22 @@ Last change:    00/00/00
 	}) 
 
 
-
+	var AXC5 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-ab5-img-wrap",
+			start: "top 40%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXC5
+	.from(".ax-ab5-client li", {
+		xPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	}) 
 
 
 
@@ -1339,29 +1389,34 @@ Last change:    00/00/00
 	})
 
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const wrapper = document.querySelector(".ax-ab4-icon-wrapper ul");
-		const items = wrapper.querySelectorAll("li");
-		const radius = 200;
-		const centerX = wrapper.clientWidth / 2;
-		const centerY = wrapper.clientHeight / 2;
-		const total = items.length;
-		const angleStep = (2 * Math.PI) / total;
 
-		items.forEach((item, index) => {
-			const angle = index * angleStep;
 
-			const x =
-			centerX + radius * Math.cos(angle) - item.offsetWidth / 2;
-			const y =
-			centerY + radius * Math.sin(angle) - item.offsetHeight / 2;
 
-			item.style.left = `${x}px`;
-			item.style.top = `${y}px`;
+
+	if ($('.ax-ab4-icon-wrapper').length > 0 ) {
+		document.addEventListener("DOMContentLoaded", () => {
+			const wrapper = document.querySelector(".ax-ab4-icon-wrapper ul");
+			const items = wrapper.querySelectorAll("li");
+			const radius = 200;
+			const centerX = wrapper.clientWidth / 2;
+			const centerY = wrapper.clientHeight / 2;
+			const total = items.length;
+			const angleStep = (2 * Math.PI) / total;
+
+			items.forEach((item, index) => {
+				const angle = index * angleStep;
+
+				const x =
+				centerX + radius * Math.cos(angle) - item.offsetWidth / 2;
+				const y =
+				centerY + radius * Math.sin(angle) - item.offsetHeight / 2;
+
+				item.style.left = `${x}px`;
+				item.style.top = `${y}px`;
+			});
 		});
-	});
 
-
+	}
 
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		var ATWORKPROCESS = gsap.timeline({
@@ -1446,7 +1501,7 @@ Last change:    00/00/00
 			);
 	}
 
-	if (window.matchMedia("(min-width: 1200px)").matches) { 
+	if (window.matchMedia("(min-width: 992px)").matches) { 
 		var Testi_pin = document.querySelectorAll(".ax-solution5-text")
 		Testi_pin.forEach((item) => {
 			gsap.to(item, {
@@ -1463,7 +1518,7 @@ Last change:    00/00/00
 	}
 
 
-	if (window.matchMedia("(min-width: 1200px)").matches) {
+	if (window.matchMedia("(min-width: 992px)").matches) {
 		const ServiceCardItem = gsap.utils.toArray(".ax-sol5-item");
 		const animateCard = (card, wrapper, index) => {
 			gsap.to(card, {
@@ -1507,13 +1562,13 @@ Last change:    00/00/00
 					slidesPerView: 4,
 				},
 				'768': {
-					slidesPerView: 3,
+					slidesPerView: 4,
 				},
 				'576': {
-					slidesPerView: 2,
+					slidesPerView: 3,
 				},
 				'480': {
-					slidesPerView: 1,
+					slidesPerView: 2,
 				},
 				'0': {
 					slidesPerView: 1,
@@ -1540,7 +1595,7 @@ Last change:    00/00/00
 
 			breakpoints: {
 				1200: { slidesPerView: 3 },
-				840: { slidesPerView: 2, spaceBetween: 24 },
+				991: { slidesPerView: 1, spaceBetween: 24 },
 				576: { slidesPerView: 1, spaceBetween: 24 },
 				0:   { slidesPerView: 1, spaceBetween: 24 },
 			}
@@ -1566,6 +1621,27 @@ Last change:    00/00/00
 			speed: 1000,
 		});
 	}; 
+
+
+	var AXFT = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ax-why-c5-item5",
+			start: "top 70%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	AXFT
+	.from(".ax-why-c5-item5 .item-chat .item-img", {
+		yPercent: -100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1, 
+		stagger: -.2,
+	})
+
+
+
 
 
 })(jQuery);

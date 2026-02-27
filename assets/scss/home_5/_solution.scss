@@ -4,14 +4,24 @@
 
 .ax-solution5-content {
 	gap: 30px;
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
 }
 
 .ax-solution5-text {
 	max-width: 620px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 }
 
 .ax-solution5-card-wrap {
 	max-width: 486px;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 }
 
 .ax-sol5-item {
@@ -19,6 +29,14 @@
 	border-radius: 24px;
 	margin-bottom: 25px;
 	background-color: #fff;
+	@media #{$xs,$xxs} {
+		padding: 30px 20px;
+	}
+	.item-icon {
+		width: 60px;
+		height: 60px;
+		transition: all 400ms ease-in-out;
+	}
 	.item-serial {
 		opacity: .1;
 		font-size: 32px;
@@ -66,6 +84,11 @@
 			a {
 				background-color: #fff;
 			}
+		}
+	}
+	&:hover {
+		.item-icon {
+			transform: scale(-1) rotate(180deg);
 		}
 	}
 }

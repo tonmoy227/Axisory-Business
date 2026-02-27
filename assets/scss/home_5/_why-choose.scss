@@ -4,7 +4,7 @@
 		.ax-sec-desc {
 			max-width: 740px;
 			.sec_title {
-				line-height: .8;
+				line-height: .9;
 				font-size: 80px;
 			}
 			p {
@@ -207,6 +207,26 @@
 			color: #fff;
 			font-size: 20px;
 			font-family: var(--ax-sora);
+			span {
+				position: relative;
+				&:before {
+					left: 0;
+					bottom: 0;
+					width: 0%;
+					content: '';
+					height: 1px;
+					position: absolute;
+					background-color: #fff;
+					transition: all 500ms ease-in-out;
+				}
+			}
+			&:hover {
+				span {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
 		}
 	}
 }

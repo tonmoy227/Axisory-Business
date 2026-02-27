@@ -853,6 +853,16 @@
 					font-size: 15px;
 					content: '\f103';
 				}
+				.dropdown-menu {
+					li {
+						a {
+							&:is(.active),
+							&:hover {
+								color: var(--ax-prime-c5) !important;
+							}
+						}
+					}
+				}
 			}
 			.btn-grp {
 				gap: 20px;

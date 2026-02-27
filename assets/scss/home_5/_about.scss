@@ -1,5 +1,9 @@
 .ax-ab5-content {
 	gap: 24px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
 }
 
 .ax-ab5-img-wrap {
@@ -61,20 +65,34 @@
 
 .ax-ab5-text-wrap {
 	max-width: 750px;
+	@media #{$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
 	.ax-sec-title3 {
 		margin-left: -160px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			margin-left: 0;
+		}
 	}
 }
 
 .ax-ab5-text-area{
 	margin-top: 32px;
 	border-top: 1px solid #E5E5E5;
+	@media #{$sm,$xs,$xxs} {
+		padding: 15px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .ax-ab5-text1 {
 	padding-top: 30px;
 	max-width: 373px;
 	border-right: 1px solid #E5E5E5;
+	@media #{$sm,$xs,$xxs} {
+		border-right: none;
+	}
 }
 
 .ax-ab5-exp {
@@ -98,6 +116,7 @@
 .ax-ab5-desc {
 	padding-top: 35px;
 	padding-left: 30px;
+	padding-right: 15px;
 }
 
 .ax-ab5-text2 {

@@ -3,8 +3,12 @@
 }
 
 .ax-cs5-top {
+	gap: 15px 30px;
 	position: relative;
 	padding-bottom: 24px;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	&:before {
 		left: 0;
 		bottom: 0;
@@ -21,6 +25,22 @@
 			font-size: 120px;
 			font-weight: 600;
 			margin-bottom: 35px;
+			padding-bottom: 24px;
+			@media #{$sm} {
+				font-size: 80px;
+				padding-bottom: 0;
+				margin-bottom: 10px;
+			}
+			@media #{$xs} {
+				font-size: 60px;
+				margin-bottom: 10px;
+				padding-bottom: 0;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+				margin-bottom: 10px;
+				padding-bottom: 0;
+			}
 		}
 		p {
 			color: #E5E5E5;
@@ -37,13 +57,16 @@
 		.arrow_1 {
 			display: block;
 			margin-bottom: 35px;
+			@media #{$sm,$xs,$xxs} {
+				display: none;
+			}
 		}
 	}
 }
 
 .ax-cs5-btn-area {
 	.nav-item {
-		margin: 0px 2px;
+		margin: 2px;
 		.nav-link {
 			font-weight: 500;
 			padding: 11px 24px;
@@ -67,34 +90,108 @@
 .ax-cs5-item {
 	max-width: 856px;
 	transition: all 500ms ease-in-out;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin: 0 auto;
+		padding: 0px 15px;
+	}
 	.item-img {
 		overflow: hidden;
+		position: relative;
 		border-radius: 32px;
+		@media #{$sm,$xs,$xxs} {
+			height: 400px;
+		}
+		img {
+			transform: scale(1.2);
+			transition: all 700ms ease-in-out;
+			@media #{$sm,$xs,$xxs} {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.cs_tag {
+			top: 0px;
+			left: 0px;
+			color: #fff;
+			opacity: 0;
+			z-index: 1;
+			visibility: hidden;
+			line-height: 1;
+			font-size: 16px;
+			font-weight: 500;
+			padding: 12px 20px;
+			position: absolute;
+			border-radius: 30px;
+			transition: all 500ms ease-in-out;
+			background-color: rgba(0, 0, 0, 0.2);
+			backdrop-filter: blur(10px);
+			transition: all 700ms ease-in-out;
+		}
+		.ax-btn5 {
+			top: 65%;
+			left: 50%;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			transform: translateY(-50%) translateX(-50%);
+			transition: all 700ms ease-in-out;
+			a {
+				background-color: #fff;
+				span {
+					color: #051229;
+				}
+				i {
+					background-color: var(--ax-prime-c5);
+					svg {
+						path {
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
 	}
 	.item-text {
 		opacity: 0;
 		margin-top: 30px;
 		position: relative;
 		padding-bottom: 20px;
+		transition: all 500ms ease-in-out;
+		gap: 15px;
+		@media #{$md,$sm,$xs,$xxs} {
+			flex-wrap: wrap;
+		}
 		&:before {
 			left: 0;
 			bottom: 0;
+			right: 0;
 			height: 1px;
-			width: 100%;
+			width: 0%;
 			content: '';
+			margin: 0 auto;
 			position: absolute;
 			background-color: #FFFFFF33;
+			transition: all 600ms ease-in-out;
 		}
 		h3 {
+			opacity: 0;
 			color: #fff;
 			font-size: 24px;
 			font-weight: 600;
+			visibility: hidden;
+			transform: translateX(30px);
+			transition: all 700ms ease-in-out;
 		}
 		p {
+			opacity: 0;
 			color: #E5E5E5;
 			max-width: 375px;
 			line-height: 1.5;
+			visibility: hidden;
 			letter-spacing: -0.5px;
+			transform: translateX(-30px);
+			transition: all 700ms ease-in-out;
 		}
 	}
 }
@@ -103,6 +200,11 @@
 	width: 140%;
 	margin-right: -19%;
 	margin-left: -19%;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .swiper-slide-prev {
@@ -119,8 +221,43 @@
 .swiper-slide-active {
 	.ax-cs5-item {
 		transform: scale(1.0);
+		.item-img {
+			.cs_tag {
+				top: 30px;
+				opacity: 1;
+				left: 30px;
+				visibility: visible;
+				transition-delay: 300ms;
+			}
+			.ax-btn5 {
+				top: 50%;
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 400ms;
+			}
+			img {
+				transform: scale(1.0);
+				transition-delay: 500ms;
+			}
+		}
 		.item-text { 
 			opacity: 1;
+			&:before {
+				width: 100%;
+				transition-delay: 700ms;
+			}
+			h3 {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 500ms;
+				transform: translateX(0px);
+			}
+			p {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 500ms;
+				transform: translateX(0px);
+			}
 		}
 	}
 }
@@ -173,7 +310,7 @@
 		}
 		&:hover {
 			color: #fff;
-			background-color: var(--ax-prime-c2);
+			background-color: var(--ax-prime-c5);
 		}
 	}
 	.ax-cs5-prev {
@@ -183,3 +320,6 @@
 		right: 15%;
 	}
 }
+
+
+
