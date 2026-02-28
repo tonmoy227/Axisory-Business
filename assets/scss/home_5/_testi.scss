@@ -1,5 +1,16 @@
+@keyframes floatUltra {
+	0%   { transform: translate3d(0px, 0px, 0) rotate(0deg); }
+	25%  { transform: translate3d(12px, -18px, 0) rotate(2deg); }
+	50%  { transform: translate3d(0px, -28px, 0) rotate(0deg); }
+	75%  { transform: translate3d(-12px, -18px, 0) rotate(-2deg); }
+	100% { transform: translate3d(0px, 0px, 0) rotate(0deg); }
+}
+
 .ax-testi5-sec {
 	margin: 0px 32px;
+	@media #{$xs,$xxs} {
+		margin: 0px 12px;
+	}
 }
 
 .ax-testi5-img-wrapper {
@@ -7,11 +18,33 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	@media #{$md,$sm,$xs,$xxs} {
+		display: none;
+	}
 	li {
 		padding: 6px;
 		position: absolute;
 		border-radius: 100%;
+		will-change: transform;
 		border: 1px solid #313130; 
+		&:nth-child(1) {
+			animation: floatUltra 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
+		&:nth-child(2) {
+			animation: floatUltra 7s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
+		&:nth-child(3) {
+			animation: floatUltra 9s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
+		&:nth-child(4) {
+			animation: floatUltra 11s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
+		&:nth-child(5) {
+			animation: floatUltra 13s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
+		&:nth-child(6) {
+			animation: floatUltra 15s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -83,7 +116,9 @@
 
 .ax-testi5-wrap {
 	overflow: hidden;
+	padding-left: 15px;
 	border-radius: 40px;
+	padding-right: 15px;
 	background-color: #080927;
 }
 
@@ -151,6 +186,14 @@
 	}
 }
 
+.ax-testi5-nav {
+	@media #{$md,$sm,$xs,$xxs} {
+		display: flex;
+		margin-top: 40px;
+		justify-content: center;
+	}
+}
+
 .ax-tst5-next,
 .ax-tst5-prev {
 	top: 50%;
@@ -165,6 +208,12 @@
 	justify-content: end;
 	background-color: #fff;
 	transform: translateY(-50%);
+	@media #{$md,$sm,$xs,$xxs} {
+		width: 60px;
+		height: 60px;
+		position: static;
+		transform: translateY(0%);
+	}
 	i {
 		width: 72px;
 		height: 72px;
@@ -195,6 +244,10 @@
 		border-radius: 100%;
 		border: 1px solid #080927;
 		transform: translateY(-50%) translateX(-50%);
+		@media #{$md,$sm,$xs,$xxs} {
+			width: 50px;
+			height: 50px;
+		}
 	}
 	&:hover {
 		i {

@@ -845,6 +845,17 @@
 					}
 				}
 			}
+			.ax-btn5 {
+				a {
+					background-color: #fff;
+					i {
+						background-color: var(--ax-prime-c5);
+					}
+					span {
+						color: var(--ax-title-color2);
+					}
+				}
+			}
 			.dropdown {
 				position: relative;
 				&:after {

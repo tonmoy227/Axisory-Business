@@ -723,7 +723,7 @@ Last change:    00/00/00
 	}
 
 
-	const buttons = document.querySelectorAll(".ax-btn1 a, .ax-btn2 a span");
+	const buttons = document.querySelectorAll(".ax-btn1 a, .ax-btn2 a span, .ax-btn5 a span");
 	buttons.forEach(btn => {
 		const split = new SplitText(btn, { type: "chars" });
 		gsap.set(split.chars, { y: 0, opacity: 1 });
@@ -1641,7 +1641,59 @@ Last change:    00/00/00
 	})
 
 
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var TVABT = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.ax-testi5-img-wrapper',
+				start: "top 65%",
+				toggleActions: 'play none none reverse',
+				markers: false,
+			}
 
+		});
+		TVABT
+		.from(".ax-testi5-img-wrapper", { opacity: 0,   scale: .8, duration: 1,   ease: "power1.out" })
+
+	};
+
+
+	if($(".bottom-text").length) {
+		var aniTitle1 = $(".bottom-text");
+		if(aniTitle1.length == 0) return; gsap.registerPlugin(SplitText); aniTitle1.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+
+			gsap.set(el, { perspective: 400 });
+
+			if( $(el).hasClass('bottom-text') ){
+				gsap.set(el.split.chars, {
+					yPercent: 100,
+					opacity: 0,
+
+				});
+			}
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					toggleActions: "play reverse play reverse",
+					markers: false,
+
+				},
+
+				yPercent: 0,
+				xPercent: 0,
+				opacity: 1,
+				duration: 2,
+				stagger: .1,
+				ease: "bounce.out",
+			});
+
+		});
+	}
 
 
 })(jQuery);

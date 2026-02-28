@@ -44,6 +44,9 @@
 			font-size: 48px;
 			font-weight: 600;
 			letter-spacing: -2px;
+			@media #{$xs,$xxs} {
+				font-size: 40px;
+			}
 			span {
 				color: #313130;
 				font-size: 16px;

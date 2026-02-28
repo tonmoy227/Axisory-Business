@@ -443,6 +443,16 @@
 					}
 				}
 			}
+			&:is(.ver_3) {
+				a {
+					&:hover {
+						border-bottom: 1px solid var(--ax-prime-c5);
+						span {
+							background-color: var(--ax-prime-c5);
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -473,6 +483,19 @@
 				}
 			}
 		}
+		&:is(.ver_3) {
+			li {
+				a {
+					opacity: .8;
+					color: #E5E5E5;
+					letter-spacing: 0;
+					&:hover {
+						opacity: 1;
+						color: #fff;
+					}
+				}
+			}
+		}
 	}
 	.widget-title {
 		gap: 12px;
@@ -494,6 +517,11 @@
 				height: 2px;
 				width: 50px;
 				background-color: var(--ax-prime-c3);
+			}
+		}
+		&:is(.ver_3) {
+			i {
+				background-color: var(--ax-prime-c5);
 			}
 		}
 	}
@@ -554,6 +582,30 @@
 					i {
 						color: #fff;
 						background-color: var(--ax-prime-c3);
+					}
+				}
+			}
+		}
+		&:is(.ver_2) {
+			form {
+				button {
+					span {
+						background-color: var(--ax-prime-c5);
+					}
+					&:hover {
+						span {
+							color: var(--ax-prime-c5);
+							background-color: #fff;
+						}
+						i {
+							color: #fff;
+							background-color: var(--ax-prime-c5);
+							svg {
+								path {
+									fill: #fff;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -668,6 +720,11 @@
 		clip-path: polygon( 50% 0%,50% 0%,77.457% 4.742%,103.503% 18.471%,127.79% 40.441%,149.969% 69.906%,169.693% 106.121%,186.611% 148.338%,200.377% 195.812%,210.641% 247.798%,217.055% 303.549%,219.271% 362.319%,219.271% 362.319%,217.055% 421.089%,210.641% 476.84%,200.377% 528.825%,186.611% 576.3%,169.693% 618.517%,149.969% 654.731%,127.79% 684.196%,103.503% 706.166%,77.457% 719.896%,50% 724.638%,50% 724.638%,22.543% 719.896%,-3.503% 706.166%,-27.79% 684.196%,-49.969% 654.731%,-69.693% 618.517%,-86.611% 576.3%,-100.377% 528.825%,-110.641% 476.84%,-117.055% 421.089%,-119.271% 362.319%,-119.271% 362.319%,-117.055% 303.549%,-110.641% 247.798%,-100.377% 195.812%,-86.611% 148.338%,-69.693% 106.121%,-49.969% 69.906%,-27.79% 40.441%,-3.503% 18.471%,22.543% 4.742%,50% 0% );
 		img {
 			opacity: .05;
+		}
+	}
+	&:is(.ver_2) {
+		&:before {
+			background: var(--ax-prime-c5);
 		}
 	}
 }
@@ -803,6 +860,19 @@
 			}
 		}
 	}
+	&:is(.ver_2) {
+		&:before {
+			background-color: #F4F4F5;
+		}
+		&:after {
+			background: #3D3F7F;
+		}
+		.item-icon {
+			&:before {
+				background: #3D3F7F;
+			}
+		}
+	}
 }
 
 
@@ -831,6 +901,9 @@
 			border-radius: 30px;
 			background-color: var(--ax-title-color2);
 		}
+	}
+	&:is(.ver_2) {
+		background-color: var(--ax-prime-c5);
 	}
 }
 
@@ -864,6 +937,9 @@
 		gap: 15px 20px;
 		flex-wrap: wrap;
 		padding: 20px 0px;
+	}
+	&:is(.ver_2) {
+		background: var(--ax-prime-c5);
 	}	
 }
 

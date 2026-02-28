@@ -710,6 +710,21 @@ a {
 	}
 }
 
+@keyframes toLeftFromRight {
+	49% {
+		-webkit-transform: translateX(20%);
+		transform: translateX(20%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translateX(-20%);
+		transform: translateX(-20%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
 .ax-btn5 {
 	display: inline-block;
 	a {
@@ -731,6 +746,13 @@ a {
 			font-size: 16px;
 			white-space: nowrap;
 			font-family: var(--ax-sora);
+		}
+		&:hover {
+			i {
+				svg {
+					animation: toLeftFromRight 0.5s forwards;
+				}
+			}
 		}
 	}
 	&:is(.ver_2) {
